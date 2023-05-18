@@ -9,7 +9,7 @@ Your vision statement should also answer the question of why you are creating a 
 
 ## Team Members
 - [Lianna Poblete](https://github.com/liannnaa)
-- Bianca Cura
+- [Bianca Cura](https://github.com/biancacura)
 
 ## History of the Project
 - What is the purpose
