@@ -1,0 +1,136 @@
+.cardreview {
+    color: #fff;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    font-family: Open Sans, Arial;
+    font-size: .375rem;
+    font-weight: 600;
+    line-height: 10px;
+    display: flex;
+  }
+  
+  .rectangle-1 {
+    height: 100%;
+    background-color: #e9a6a60d;
+    border-radius: 14px 7px 7px;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-self: flex-start;
+    align-items: stretch;
+    display: flex;
+  }
+  
+  .mask-group-3 {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    align-self: flex-start;
+  }
+  
+  .flex-container-11 {
+    height: 90%;
+    flex-direction: column;
+    flex-basis: 67%;
+    justify-content: space-between;
+    align-self: center;
+    align-items: stretch;
+    display: flex;
+  }
+  
+  .zack-sn {
+    align-self: flex-start;
+    font-size: .438rem;
+  }
+  
+  .flex-container-12 {
+    color: #ffffff80;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: flex-start;
+    align-items: stretch;
+    margin-bottom: 2px;
+    margin-left: 1px;
+    padding-right: 80px;
+    font-size: .438rem;
+    font-weight: 400;
+    display: flex;
+  }
+  
+  .review-by-audrey {
+    color: #fff;
+    align-self: flex-start;
+    margin-right: 3px;
+  }
+  
+  .stars-1 {
+    width: 20px;
+    height: 5px;
+    object-fit: cover;
+    align-self: flex-start;
+  }
+  
+  .vector-2 {
+    width: 5px;
+    height: 5px;
+    object-fit: cover;
+    border: .5px solid #fff;
+    align-self: center;
+    margin-left: 4px;
+  }
+  
+  .num-2 {
+    align-self: center;
+    margin-bottom: 1px;
+    margin-left: 3px;
+    font-size: .375rem;
+    font-weight: 600;
+    line-height: 8px;
+  }
+  
+  .the-interesting-thing-about-snyd {
+    align-self: flex-start;
+    margin-bottom: 1px;
+    font-weight: 400;
+    line-height: 8px;
+  }
+  
+  .flex-container-13 {
+    color: #9c4a8b;
+    width: 100%;
+    flex-direction: row;
+    flex-basis: 6%;
+    justify-content: flex-start;
+    align-self: flex-start;
+    align-items: center;
+    margin-bottom: -1px;
+    margin-left: 1px;
+    padding-right: 80px;
+    line-height: 8px;
+    display: flex;
+  }
+  
+  .read-more {
+    align-self: flex-start;
+    margin-right: 4px;
+  }
+  
+  .vector-3 {
+    width: 2px;
+    height: 3px;
+    object-fit: cover;
+    border: .5px solid #9c4a8b;
+    align-self: center;
+    margin-right: 74px;
+  }
+  
+  .mask-group-2 {
+    width: 57px;
+    height: 93px;
+    object-fit: cover;
+    align-self: flex-start;
+    margin-left: 4px;
+  }
+  
