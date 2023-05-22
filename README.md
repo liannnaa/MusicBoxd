@@ -19,4 +19,4 @@ Your vision statement should also answer the question of why you are creating a 
 # Running App
 - run npm install in main directory, back-end, and front-end
 - See front-end and back-end md for .env requirements
-- run back-end and front-end 
+- run back-end and front-end
