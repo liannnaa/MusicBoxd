@@ -5,9 +5,9 @@ import union from '../assets/union.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
 
-import Cardreview from "../components/cardReview";
 import PopularAlbum from "../components/albumMini";
 import PopularList from "../components/listMini";
+import RecentReview from "../components/reviewMini";
 
 const Homepage = () => {
     return (
@@ -29,8 +29,8 @@ const Homepage = () => {
             <PopularAlbum/>
             <PopularAlbum/>
             <PopularAlbum/>
+            <PopularAlbum/>
         </div>
-
         <span className="section-title">
             Popular Lists This Month
         </span>
@@ -38,6 +38,16 @@ const Homepage = () => {
             <PopularList/>
             <PopularList/>
             <PopularList/>
+            <PopularList/>
+        </div>
+        <span className="section-title">
+            Recent Friend's Reviews
+        </span>
+        <div className="reviews">
+            <RecentReview/>
+            <RecentReview/>
+            <RecentReview/>
+            <RecentReview/>
         </div>
     </div>
   );

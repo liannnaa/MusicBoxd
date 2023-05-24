@@ -1,4 +1,4 @@
-.cardreview {
+.review {
     color: #fff;
     flex-direction: row;
     justify-content: flex-start;
@@ -6,11 +6,11 @@
     font-family: Open Sans, Arial;
     font-size: .375rem;
     font-weight: 600;
-    line-height: 10px;
+    line-height: 8px;
     display: flex;
-  }
+}
   
-  .rectangle-1 {
+.card {
     height: 100%;
     background-color: #e9a6a60d;
     border-radius: 14px 7px 7px;
@@ -20,16 +20,16 @@
     align-self: flex-start;
     align-items: stretch;
     display: flex;
-  }
+}
   
-  .mask-group-3 {
+.pp {
     width: 28px;
     height: 28px;
     object-fit: cover;
     align-self: flex-start;
-  }
+}
   
-  .flex-container-11 {
+.contents {
     height: 90%;
     flex-direction: column;
     flex-basis: 67%;
@@ -37,14 +37,15 @@
     align-self: center;
     align-items: stretch;
     display: flex;
-  }
+}
   
-  .zack-sn {
+.title {
     align-self: flex-start;
     font-size: .438rem;
-  }
+    line-height: 10px;
+}
   
-  .flex-container-12 {
+.info {
     color: #ffffff80;
     width: 100%;
     flex-direction: row;
@@ -54,25 +55,25 @@
     margin-bottom: 2px;
     margin-left: 1px;
     padding-right: 80px;
-    font-size: .438rem;
-    font-weight: 400;
     display: flex;
   }
   
-  .review-by-audrey {
+.user {
     color: #fff;
     align-self: flex-start;
     margin-right: 3px;
+    font-size: .438rem;
+    font-weight: 400;
+    line-height: 10px;
   }
   
-  .stars-1 {
+.stars {
     width: 20px;
     height: 5px;
     object-fit: cover;
     align-self: flex-start;
-  }
-  
-  .vector-2 {
+}
+.comment {
     width: 5px;
     height: 5px;
     object-fit: cover;
@@ -81,23 +82,19 @@
     margin-left: 4px;
   }
   
-  .num-2 {
+.num {
     align-self: center;
     margin-bottom: 1px;
     margin-left: 3px;
-    font-size: .375rem;
-    font-weight: 600;
-    line-height: 8px;
-  }
+}
   
-  .the-interesting-thing-about-snyd {
+.album-review {
     align-self: flex-start;
     margin-bottom: 1px;
     font-weight: 400;
-    line-height: 8px;
   }
   
-  .flex-container-13 {
+.expand {
     color: #9c4a8b;
     width: 100%;
     flex-direction: row;
@@ -108,29 +105,28 @@
     margin-bottom: -1px;
     margin-left: 1px;
     padding-right: 80px;
-    line-height: 8px;
     display: flex;
   }
   
-  .read-more {
+.read-more {
     align-self: flex-start;
     margin-right: 4px;
-  }
+}
   
-  .vector-3 {
+.arrow {
     width: 2px;
     height: 3px;
     object-fit: cover;
     border: .5px solid #9c4a8b;
     align-self: center;
     margin-right: 74px;
-  }
-  
-  .mask-group-2 {
+}
+
+.album {
     width: 57px;
     height: 93px;
     object-fit: cover;
     align-self: flex-start;
     margin-left: 4px;
-  }
-  
+    border-radius: 10px;
+}
