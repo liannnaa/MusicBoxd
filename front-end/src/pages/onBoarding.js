@@ -13,9 +13,7 @@ const OnBoarding= (props) => {
         friends what’s good.”
       </span>
       <button className="button-get-started">
-        <div className="rectangle-1">
-          <span className="get-started">Get Started</span>
-        </div>
+        Get Started
       </button>
     </div>
     );

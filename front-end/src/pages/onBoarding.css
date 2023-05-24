@@ -46,40 +46,19 @@ body {
 }
   
 .button-get-started {
-    text-align: justify;
     color: #1f1d36;
     width: 35%;
-    background-color: #0000;
+    background-color: #e9a6a6;
     border: none;
-    flex-direction: row;
-    flex-basis: 6%;
-    justify-content: flex-start;
-    align-self: center;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
     margin-top: 4px;
     margin-bottom: 13px;
-    margin-left: 2px;
     font-family: Open Sans, Arial;
     font-size: .813rem;
     font-weight: 700;
     line-height: 18px;
     display: flex;
-}
-  
-.rectangle-1 {
-    height: 100%;
-    background-color: #e9a6a6;
+    padding: 10px;
     border-radius: 20px;
-    flex-direction: row;
-    flex-basis: 100%;
-    justify-content: center;
-    align-self: flex-start;
-    align-items: center;
-    padding-top: 1px;
-    padding-right: 1px;
-    display: flex;
-}
-  
-.get-started {
-    align-self: center;
 }
