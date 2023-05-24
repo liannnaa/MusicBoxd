@@ -58,7 +58,7 @@ body {
     line-height: 25px;
 }
 
-.review-or-track-music-youve-list {
+.intro {
     align-self: flex-start;
     margin-top: -90px;
     margin-bottom: 10px;
@@ -68,40 +68,13 @@ body {
     line-height: 14px;
 }
 
-.popular-albums-this-month {
-    align-self: flex-start;
-    margin-top: -70px;
-    margin-left: 21px;
-}
-
-.popular-albums {
-    width: 95%;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-self: center;
-    align-items: stretch;
-    margin-top: -100px;
-    margin-bottom: 16px;
-    display: flex;
-}
-
-.popular-album {
-    width: 58px;
-    height: 82px;
-    object-fit: cover;
-    align-self: flex-start;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 10px;
-}
-
-.popular-lists-this-month {
+.section-title {
     align-self: flex-start;
     margin-top: -100px;
     margin-left: 21px;
 }
 
-.popular-lists {
+.section-contents {
     width: 95%;
     flex-direction: row;
     justify-content: flex-start;
@@ -112,37 +85,4 @@ body {
     margin-right: 333px;
     padding-right: 29px;
     display: flex;
-}
-
-.list {
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: flex-start;
-    align-items: center;
-    margin-right: 30px;
-    display: flex;
-}
-
-.list-image {
-    z-index: 1;
-    width: 58px;
-    height: 82px;
-    object-fit: cover;
-    align-self: flex-start;
-    border-radius: 10px;
-}
-
-.list-title {
-    color: #e9a6a6;
-    width: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-self: center;
-    align-items: stretch;
-    margin-top: 10px;
-    font-size: .625rem;
-    line-height: 14px;
-    display: flex;
-    text-align: center;
 }

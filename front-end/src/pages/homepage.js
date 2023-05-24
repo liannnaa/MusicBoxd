@@ -6,6 +6,7 @@ import union from '../assets/union.svg';
 import Placeholder from '../assets/placeholder.PNG';
 
 import Cardreview from "../components/cardReview";
+import PopularAlbum from "../components/albumMini";
 import PopularList from "../components/listMini";
 
 const Homepage = () => {
@@ -18,24 +19,22 @@ const Homepage = () => {
         <span className="hello">
             Hello, User!
         </span>
-        <span className="review-or-track-music-youve-list">
+        <span className="intro">
             Review or track music you’ve listened to...
         </span>
-        <span className="popular-albums-this-month">
+        <span className="section-title">
             Popular Albums This Month
         </span>
-        <div className="popular-albums">
-            <img className="popular-album" src={Placeholder} alt="album1" />
-            <img className="popular-album" src={Placeholder} alt="album2" />
-            <img className="popular-album" src={Placeholder} alt="album3" />
-            <img className="popular-album" src={Placeholder} alt="album4" />
-            <img className="popular-album"src={Placeholder} alt="album5" />
+        <div className="section-contents">
+            <PopularAlbum/>
+            <PopularAlbum/>
+            <PopularAlbum/>
         </div>
 
-        <span className="popular-lists-this-month">
+        <span className="section-title">
             Popular Lists This Month
         </span>
-        <div className="popular-lists">
+        <div className="section-contents">
             <PopularList/>
             <PopularList/>
             <PopularList/>

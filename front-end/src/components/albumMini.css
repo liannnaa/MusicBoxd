@@ -1,0 +1,44 @@
+.album {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    align-items: center;
+    margin-right: 30px;
+    display: flex;
+}
+
+.album-image {
+    z-index: 1;
+    width: 58px;
+    height: 82px;
+    object-fit: cover;
+    align-self: flex-start;
+    border-radius: 10px;
+}
+
+.album-title {
+    color: #e9a6a6;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+    align-items: stretch;
+    margin-top: 10px;
+    font-size: .625rem;
+    line-height: 14px;
+    display: flex;
+    text-align: center;
+}
+
+.album-artist {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+    align-items: stretch;
+    font-size: .625rem;
+    line-height: 14px;
+    display: flex;
+    text-align: center;
+}
