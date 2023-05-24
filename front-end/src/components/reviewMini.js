@@ -18,7 +18,10 @@ const Review = () => {
                 </span>
                 <div className="info">
                     <span className="user">
-                        Review by User
+                        Review by
+                        <span className="review-username">
+                            User
+                        </span>
                     </span>
                     <img className="stars" src={stars} alt="stars" />
                     <img className="comment" src={comment} alt="comment" />

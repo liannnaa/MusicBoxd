@@ -1,5 +1,6 @@
 import React from 'react';
 import './signUp.css';
+
 import banner from '../assets/banner.svg';
 import logo from '../assets/logo.PNG';
 

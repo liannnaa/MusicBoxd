@@ -17,7 +17,10 @@ const Homepage = () => {
             <img className="pp" src={Placeholder} alt="profile" />
         </div>
         <span className="hello">
-            Hello, User!
+            Hello, 
+            <span className="username">
+                User
+            </span>!
         </span>
         <span className="intro">
             Review or track music you’ve listened to...

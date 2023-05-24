@@ -42,6 +42,7 @@
 }
   
 .title {
+    color: #e9a6a6;
     align-self: flex-start;
     font-size: .438rem;
     line-height: 10px;
@@ -56,7 +57,7 @@
     align-items: stretch;
     padding-right: 80px;
     display: flex;
-  }
+}
   
 .user {
     color: #fff;
@@ -64,8 +65,13 @@
     font-size: .438rem;
     font-weight: 400;
     line-height: 10px;
-  }
-  
+}
+
+.review-username {
+    color: #e9a6a6;
+    margin-left: 2px;
+}
+
 .stars {
     width: 20px;
     height: 5px;
