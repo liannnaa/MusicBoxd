@@ -11,7 +11,7 @@ const Review = () => {
     return (
     <div className='review'>
         <div className="card">
-            <img className="pp" src={Placeholder} alt="pp" />
+            <img className="review-pp" src={Placeholder} alt="pp" />
             <div className="contents">
                 <span className="title">
                     Title
