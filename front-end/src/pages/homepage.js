@@ -1,11 +1,12 @@
-import React, { useEffect, useState, propsData } from 'react';
-import axios from 'axios';
+import React from 'react';
 import "./homepage.css";
 
 import union from '../assets/union.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
+
 import Cardreview from "../components/cardReview";
+import PopularList from "../components/listMini";
 
 const Homepage = () => {
     return (
@@ -35,19 +36,10 @@ const Homepage = () => {
             Popular Lists This Month
         </span>
         <div className="popular-lists">
-            <div className="list">
-                <img className="list-image" src={Placeholder} alt="list" />
-                <span className="list-title">List Title</span>
-            </div>
-            <div className="list">
-                <img className="list-image" src={Placeholder} alt="list" />
-                <span className="list-title">List Title</span>
-            </div>
-            <div className="list">
-                <img className="list-image" src={Placeholder} alt="list" />
-                <span className="list-title">List Title</span>
-            </div>
-      </div>
+            <PopularList/>
+            <PopularList/>
+            <PopularList/>
+        </div>
     </div>
   );
 };

@@ -1,0 +1,82 @@
+.list {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    align-items: center;
+    margin-right: 30px;
+    display: flex;
+}
+
+.list-image {
+    z-index: 1;
+    width: 58px;
+    height: 82px;
+    object-fit: cover;
+    align-self: flex-start;
+    border-radius: 10px;
+}
+
+.list-title {
+    color: #e9a6a6;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+    align-items: stretch;
+    margin-top: 10px;
+    font-size: .625rem;
+    line-height: 14px;
+    display: flex;
+    text-align: center;
+}
+
+.list-user {
+    color: #ffffff80;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: center;
+    align-items: stretch;
+    font-size: .25rem;
+    font-weight: 400;
+    line-height: 5px;
+    display: flex;
+}
+
+.list-pp {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    align-self: flex-start;
+    margin-right: 4px;
+}
+  
+.list-name {
+    color: #e9a6a6;
+    align-self: center;
+    font-size: .375rem;
+    font-weight: 600;
+    line-height: 8px;
+}
+  
+.list-heart {
+    width: 6px;
+    height: 6px;
+    object-fit: cover;
+    align-self: center;
+    margin-left: 4px;
+}
+  
+.list-num {
+    align-self: center;
+    margin-left: 1px;
+}
+  
+.list-comment {
+    width: 4px;
+    height: 4px;
+    object-fit: cover;
+    align-self: center;
+    margin-left: 5px;
+}
