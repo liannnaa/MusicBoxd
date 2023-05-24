@@ -2,8 +2,8 @@ import React from 'react';
 import "./reviewMini.css";
 
 import stars from '../assets/stars.svg';
-import comment from '../assets/vector2.svg';
-import arrow from '../assets/vector3.svg';
+import comment from '../assets/comment.svg';
+import arrow from '../assets/arrowRight.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
 

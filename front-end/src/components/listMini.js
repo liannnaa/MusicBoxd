@@ -1,8 +1,8 @@
 import React from 'react';
 import "./listMini.css";
 
-import heart from '../assets/antDesignheartFilled.svg';
-import comment from '../assets/vector6.svg';
+import heart from '../assets/heart.svg';
+import comment from '../assets/comment.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
 

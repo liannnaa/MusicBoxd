@@ -1,7 +1,7 @@
 import React from 'react';
 import './onBoarding.css';
 
-import header from "../assets/header.svg";
+import header from "../assets/start.svg";
 import logo from "../assets/logo.PNG";
 
 const OnBoarding= (props) => {

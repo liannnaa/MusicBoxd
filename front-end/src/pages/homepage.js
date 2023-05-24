@@ -1,7 +1,7 @@
 import React from 'react';
 import "./homepage.css";
 
-import union from '../assets/union.svg';
+import union from '../assets/hamburger.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
 
