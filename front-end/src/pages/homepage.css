@@ -20,7 +20,7 @@ body {
     display: flex;
 }
 
-.heading {
+.homepage-heading {
     width: 95%;
     flex-direction: row;
     justify-content: flex-start;
@@ -32,7 +32,7 @@ body {
     margin-top: 20px;
 }
 
-.union {
+.homepage-union {
     width: 20px;
     height: 15px;
     object-fit: cover;
@@ -41,7 +41,7 @@ body {
     left: 20px;
 }
 
-.pp {
+.homepage-pp {
     width: 44px;
     height: 44px;
     object-fit: cover;
@@ -50,7 +50,7 @@ body {
     border-radius: 50%;
 }
 
-.hello {
+.homepage-hello {
     align-self: flex-start;
     margin-left: 22px;
     font-size: 1.125rem;
@@ -58,12 +58,12 @@ body {
     line-height: 25px;
 }
 
-.username {
+.homepage-username {
     color: #e9a6a6;
     margin-left: 5px;
 }
 
-.intro {
+.homepage-intro {
     align-self: flex-start;
     margin-left: 21px;
     font-size: .625rem;
@@ -73,12 +73,12 @@ body {
     margin-bottom: -30px;
 }
 
-.section-title {
+.homepage-section-title {
     align-self: flex-start;
     margin-left: 21px;
 }
 
-.section-contents {
+.homepage-section-contents {
     width: 95%;
     flex-direction: row;
     justify-content: flex-start;
@@ -91,7 +91,7 @@ body {
     display: flex;
 }
 
-.reviews {
+.homepage-reviews {
     width: 95%;
     flex-direction: column;
     justify-content: flex-start;

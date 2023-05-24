@@ -7,21 +7,23 @@ import logo from '../assets/logo.PNG';
 const Login = () => {
   return (
     <div className="login">
-      <img className="banner" src={banner} alt="banner" />
-      <img className="logo" src={logo} alt="logo" />
-      <span className="login-1">Login</span>
-      <span className="please-sign-in-to-continue">
+      <img className="login-banner" src={banner} alt="banner" />
+      <img className="login-logo" src={logo} alt="logo" />
+      <span className="login-text">Login</span>
+      <span className="login-instructions">
         Please sign in to continue.
       </span>
-      <input className="uname-box" placeholder="Username" type="text" />
-      <input className="pw-box" placeholder="Password" type="text" />
-      <span className="forgot-password">Forgot Password?</span>
+      <input className="login-input" placeholder="Username" type="text" />
+      <input className="login-input" placeholder="Password" type="text" />
+      <span className="login-link">
+        Forgot Password?
+      </span>
       <button className="login-button">
-        <div className="rectangle-5">
-          <span className="login-2">Login</span>
-        </div>
+          <span className="login-button-text">
+            Login
+          </span>
       </button>
-      <span className="dont-have-an-account-please-sign">
+      <span className="login-exit">
         Don’t have an account? Please Sign Up first.
       </span>
     </div>

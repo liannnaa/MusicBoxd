@@ -7,21 +7,23 @@ import logo from '../assets/logo.PNG';
 const SignUp = () => {
     return (
       <div className="sign-up">
-        <img className="banner" src={banner} alt="banner" />
-        <img className="logo" src={logo} alt="logo" />
-        <span className="sign-up-1">Sign Up</span>
-        <span className="create-an-account-to-continue">
+        <img className="sign-up-banner" src={banner} alt="banner" />
+        <img className="sign-up-logo" src={logo} alt="logo" />
+        <span className="sign-up-title">
+          Sign Up
+        </span>
+        <span className="sign-up-instructions">
           Create an account to continue.
         </span>
-        <input className="uname-box" placeholder="Username" type="text" />
-        <input className="email-box" placeholder="Email" type="text" />
-        <input className="pw-box" placeholder="Password" type="text" />
+        <input className="sign-up-input" placeholder="Username" type="text" />
+        <input className="sign-up-input" placeholder="Email" type="text" />
+        <input className="sign-up-input" placeholder="Password" type="text" />
         <button className="sign-up-button">
-          <div className="rectangle-6">
-            <span className="sign-up-2">Sign Up</span>
-          </div>
+          <span className="sign-up-button-text">
+            Sign Up
+          </span>
         </button>
-        <span className="already-have-an-account-go-to-th">
+        <span className="sign-up-exit">
           Already have an account? Go to the Login Page.
         </span>
       </div>

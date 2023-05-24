@@ -10,36 +10,36 @@ import Placeholder from '../assets/placeholder.PNG';
 const Review = () => {
     return (
     <div className='review'>
-        <div className="card">
+        <div className="review-card">
             <img className="review-pp" src={Placeholder} alt="pp" />
-            <div className="contents">
-                <span className="title">
+            <div className="review-contents">
+                <span className="review-title">
                     Title
                 </span>
-                <div className="info">
-                    <span className="user">
+                <div className="review-info">
+                    <span className="review-user">
                         Review by
                         <span className="review-username">
                             User
                         </span>
                     </span>
-                    <img className="stars" src={stars} alt="stars" />
-                    <img className="comment" src={comment} alt="comment" />
-                    <span className="num">
+                    <img className="review-stars" src={stars} alt="stars" />
+                    <img className="review-comment" src={comment} alt="comment" />
+                    <span className="review-num">
                         1
                     </span>
                 </div>
-                <span className="album-review">
+                <span className="review-album-review">
                     Album Review
                 </span>
-                <div className="expand">
-                    <span className="read-more">
+                <div className="review-expand">
+                    <span className="review-read-more">
                         Read More
                     </span>
-                    <img className="arrow" src={arrow} alt="arrow" />
+                    <img className="review-arrow" src={arrow} alt="arrow" />
                 </div>
             </div>
-            <img className="album" src={Placeholder} alt="album" />
+            <img className="review-album" src={Placeholder} alt="album" />
         </div>
     </div>
   );
