@@ -9,6 +9,7 @@ import PopularAlbum from "../components/albumMini";
 import PopularList from "../components/listMini";
 import RecentReview from "../components/reviewMini";
 import SideBar from "../components/sidebar";
+import Menu from "../components/menu";
 
 const Homepage = () => {
     const [showUserInformation, setShowUserInformation] = useState(false);
@@ -55,6 +56,9 @@ const Homepage = () => {
                 <RecentReview/>
                 <RecentReview/>
                 <RecentReview/>
+            </div>
+            <div className="homepage-section-contents">
+                <Menu/>
             </div>
         </div>
     );
