@@ -15,7 +15,7 @@ import Logout from '../assets/logout.svg';
 const Sidebar = ({ hideSidebar }) => {
     return (
         <div className="sidebar">
-            <div className="sidebar-rectangle">
+            <div className="sidebar-contents">
                 <img className="sidebar-hamburger" src={Hamburger} alt="hamburger" onClick={hideSidebar} />
                 <div className="sidebar-profile">
                     <img className="sidebar-pp" src={Placeholder} alt="profile" />
@@ -30,10 +30,18 @@ const Sidebar = ({ hideSidebar }) => {
                 </div>
                 <div className="sidebar-social">
                     <button className="sidebar-follow">
-                        <div className="sidebar-follow-outline" />
+                        <div className="sidebar-follow-outline">
+                            <span className="sidebar-follow-text">
+                                1 Followers
+                            </span>
+                        </div>
                     </button>
                     <button className="sidebar-follow">
-                        <div className="sidebar-follow-outline" />
+                        <div className="sidebar-follow-outline">
+                            <span className="sidebar-follow-text">
+                                1 Following
+                            </span>
+                        </div>
                     </button>
                 </div>
                 <button className="sidebar-item">
