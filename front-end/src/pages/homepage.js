@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./homepage.css";
 
-import union from '../assets/hamburger.svg';
+import hamburger from '../assets/hamburger.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
 
 import PopularAlbum from "../components/albumMini";
 import PopularList from "../components/listMini";
 import RecentReview from "../components/reviewMini";
+import SideBar from "../components/sidebar";
 
 const Homepage = () => {
+    const [showUserInformation, setShowUserInformation] = useState(false);
+
     return (
         <div className="homepage">
             <div className="homepage-heading">
-                <img className="homepage-union" src={union} alt="union" />
+                <img className="homepage-hamburger" src={hamburger} alt="hamburger" onClick={() => setShowUserInformation(!showUserInformation)} />
                 <img className="homepage-pp" src={Placeholder} alt="profile" />
             </div>
+            {showUserInformation && <SideBar />}
             <span className="homepage-hello">
                 Hello, 
                 <span className="homepage-username">
