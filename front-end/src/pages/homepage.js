@@ -19,7 +19,7 @@ const Homepage = () => {
                 <img className="homepage-hamburger" src={hamburger} alt="hamburger" onClick={() => setShowUserInformation(!showUserInformation)} />
                 <img className="homepage-pp" src={Placeholder} alt="profile" />
             </div>
-            {showUserInformation && <SideBar />}
+            {showUserInformation && <SideBar hideSidebar={() => setShowUserInformation(false)} />}
             <span className="homepage-hello">
                 Hello, 
                 <span className="homepage-username">

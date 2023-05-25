@@ -12,11 +12,11 @@ import Lists from '../assets/list.svg';
 import Likes from '../assets/likes.svg';
 import Logout from '../assets/logout.svg';
 
-const Sidebar = () => {
+const Sidebar = ({ hideSidebar }) => {
     return (
         <div className="sidebar">
             <div className="sidebar-rectangle">
-                <img className="sidebar-hamburger" src={Hamburger} alt="hamburger" />
+                <img className="sidebar-hamburger" src={Hamburger} alt="hamburger" onClick={hideSidebar} />
                 <div className="sidebar-profile">
                     <img className="sidebar-pp" src={Placeholder} alt="profile" />
                     <div className="sidebar-usernames">
