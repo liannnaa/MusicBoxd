@@ -18,7 +18,7 @@ const Review = () => {
                 </span>
                 <div className="review-info">
                     <span className="review-user">
-                        Review by
+                        Review by{" "}
                         <span className="review-username">
                             User
                         </span>
