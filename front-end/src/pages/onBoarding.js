@@ -9,7 +9,7 @@ const OnBoarding= () => {
   const navigate = useNavigate();
   
   const navigateToLogin = () => {
-    navigate("/login");
+    navigate("/Login");
   }
 
   return (

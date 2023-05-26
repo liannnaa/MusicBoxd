@@ -1,10 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './signUp.css';
 
 import banner from '../assets/login.svg';
 import logo from '../assets/logo.PNG';
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  
+  const navigateToProfile = () => {
+    navigate("/Profile");
+  }
+  const navigateToLogin = () => {
+    navigate("/Login");
+  }
+
     return (
       <div className="sign-up">
         <img className="sign-up-banner" src={banner} alt="banner" />
