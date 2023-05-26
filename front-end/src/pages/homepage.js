@@ -22,7 +22,7 @@ const Homepage = () => {
             </div>
             {showUserInformation && <SideBar hideSidebar={() => setShowUserInformation(false)} />}
             <span className="homepage-hello">
-                Hello, 
+                Hello,{" "}
                 <span className="homepage-username">
                     User
                 </span>!
@@ -37,7 +37,6 @@ const Homepage = () => {
                 <PopularAlbum/>
                 <PopularAlbum/>
                 <PopularAlbum/>
-                <PopularAlbum/>
             </div>
             <span className="homepage-section-title">
                 Popular Lists This Month
@@ -46,13 +45,11 @@ const Homepage = () => {
                 <PopularList/>
                 <PopularList/>
                 <PopularList/>
-                <PopularList/>
             </div>
             <span className="homepage-section-title">
                 Recent Friend's Reviews
             </span>
             <div className="homepage-reviews">
-                <RecentReview/>
                 <RecentReview/>
                 <RecentReview/>
                 <RecentReview/>
