@@ -34,10 +34,6 @@ body {
     transition: background-color 0.1s ease-in-out;
 }
 
-.menu-box:hover {
-    background-color: #e9a6a60d;
-}
-
 .menu-link {
     display: flex;
     height: 100%;
