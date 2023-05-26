@@ -4,12 +4,11 @@
     justify-content: space-between;
     align-self: flex-start;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 3vw;
     display: flex;
 }
 
 .album-image {
-    z-index: 1;
     width: 58px;
     height: 58px;
     object-fit: cover;
@@ -24,9 +23,8 @@
     justify-content: flex-start;
     align-self: center;
     align-items: stretch;
-    margin-top: 10px;
+    margin-top: 1vh;
     font-size: .625rem;
-    line-height: 14px;
     display: flex;
     text-align: center;
 }
@@ -38,7 +36,6 @@
     align-self: center;
     align-items: stretch;
     font-size: .625rem;
-    line-height: 14px;
     display: flex;
     text-align: center;
 }
