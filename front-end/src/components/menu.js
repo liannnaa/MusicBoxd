@@ -14,7 +14,7 @@ const Menu = () => {
             </Link>
         </div>
         <div className="menu-box">
-            <Link to="/profile" className="menu-full-size-link">
+            <Link to="/profile" className="menu-link">
                 <img className="menu-icon" src={Placeholder} alt="profile" />
             </Link>
         </div>
