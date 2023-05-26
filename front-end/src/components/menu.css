@@ -1,56 +1,32 @@
-.menu-wrapper {
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 80px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
+    height: 50px;
+    background: #1f1d36;
     display: flex;
-    overflow-x: auto;
-  }
-  
-  .full-size-link {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .menu-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    min-width: 50px;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 1px;
-    color: #444444;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: background-color 0.1s ease-in-out;
-  }
-  .menu-box img {
-    height: 40%;
-    width: auto;
-    padding-bottom: 5%;
-  }
-  .menu-box:hover {
-    background-color: #eeeeee;
-  }
-  
-  .menu-box::after {
-    color: #3bdbbb;
-  }
-  
-  .menu-box {
-    font-size: 14px;
-    font-family: 'Courier Prime', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
+    left: 0;
+}
+
+.menu-box {
+
+}
+
+.menu-link {
+
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    align-self: flex-start;
+}

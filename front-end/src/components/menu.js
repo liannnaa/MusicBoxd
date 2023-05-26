@@ -7,16 +7,16 @@ import Placeholder from '../assets/placeholder.PNG';
 
 const Menu = () => {
     return (
-      <div className="menu-wrapper">
+      <div className="menu">
         <div className="menu-box">
-          <Link to="/" className="full-size-link">
-            <img src={Placeholder} alt="home" />
-          </Link>
+            <Link to="/home" className="menu-link">
+                <img className="menu-icon" src={Placeholder} alt="home" />
+            </Link>
         </div>
         <div className="menu-box">
-          <Link to="/profile" className="full-size-link">
-            <img src={Placeholder} alt="profile" />
-          </Link>
+            <Link to="/profile" className="menu-full-size-link">
+                <img className="menu-icon" src={Placeholder} alt="profile" />
+            </Link>
         </div>
       </div>
     );
