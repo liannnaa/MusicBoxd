@@ -1,78 +1,77 @@
-body {
-    overflow: hidden;
+body, html {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .sign-up {
-    color: #fff;
     text-align: center;
+    color: #fff;
     width: 100%;
     height: 100vh;
     background-color: #1f1d36;
     border-radius: 0;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
-    padding-bottom: 80px;
     font-family: Open Sans, Arial;
-    font-size: 1.5rem;
+    font-size: .563rem;
     font-weight: 400;
-    line-height: 12px;
-    display: flex;
-    margin-top: -35px;
+    line-height: 1vh;
+    display: flex;;
 }
 
 .sign-up-banner {
     width: 100%;
-    height: 389px;
+    height: 50vh;
     object-fit: cover;
     align-self: flex-start;
-    margin-bottom: 25px;
+    margin-bottom: 5vh;
 }
 
 .sign-up-logo {
     position: relative;
     width: 80%;
     object-fit: contain;
-    margin-top: -200px;
+    margin-top: -30vh;
 }
 
 .sign-up-title {
     align-self: center;
-    margin-top: 1px;
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: 33px;
+    line-height: 5vh;
 }
 
 .sign-up-instructions {
     align-self: center;
-    margin-bottom: 13px;
+    margin-bottom: 5vh;
     font-size: .813rem;
-    line-height: 18px;
 }
   
 .sign-up-input {
-    color: #ffffff80;
+    color: #ffff;
     width: 65%;
     background-color: #c4c4c459;
     border: none;
-    border-radius: 30px;
+    border-radius: 2vh;
     flex-direction: row;
     flex-basis: 4%;
     justify-content: flex-start;
     align-self: center;
     align-items: stretch;
-    margin-top: 2px;
+    margin-bottom: 2vh;
     font-family: Open Sans, Arial;
     font-size: 9px;
     font-weight: 400;
-    line-height: 12px;
     display: flex;
+    padding-left: 3vw;
 }
 
 .sign-up-button {
-    color: #1f1d36;
     text-align: center;
+    color: #1f1d36;
     width: 30%;
     background-color: #0000;
     border: none;
@@ -81,33 +80,32 @@ body {
     justify-content: flex-start;
     align-self: center;
     align-items: stretch;
-    margin-top: 2px;
-    margin-bottom: 3px;
-    margin-left: 9px;
+    margin-bottom: 3vh;
     font-family: Open Sans, Arial;
-    font-size: .813rem;
+    font-size: .875rem;
     font-weight: 700;
-    line-height: 18px;
     display: flex;
 }
   
 .sign-up-button-text {
     height: 100%;
     background-color: #e9a6a6;
-    border-radius: 30px;
+    border-radius: 2vh;
     flex-direction: row;
     flex-basis: 100%;
     justify-content: center;
     align-items: center;
-    padding-top: 2px;
     display: flex;
     align-self: center;
-    margin-top: 1px;
 }
   
 .sign-up-exit {
     color: #e9a6a6;
     align-self: center;
-    margin-bottom: 13px;
-    font-size: .563rem;
+}
+
+.sign-up-login {
+    cursor: pointer;
+    text-decoration: underline;
+    color: inherit;
 }

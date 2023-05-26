@@ -28,13 +28,17 @@ const SignUp = () => {
         <input className="sign-up-input" placeholder="Username" type="text" />
         <input className="sign-up-input" placeholder="Email" type="text" />
         <input className="sign-up-input" placeholder="Password" type="text" />
-        <button className="sign-up-button">
+        <button className="sign-up-button" onClick={navigateToProfile}>
           <span className="sign-up-button-text">
             Sign Up
           </span>
         </button>
         <span className="sign-up-exit">
-          Already have an account? Go to the Login Page.
+          Already have an account? Go to the{" "}
+          <span className="sign-up-login" onClick={navigateToLogin}>
+          Login Page
+        </span>
+        .
         </span>
       </div>
     );
