@@ -9,6 +9,9 @@ import Homepage from './pages/homepage';
 import Profile from './pages/profile';
 import Musicpage from './pages/musicPage';
 import Reviewpage from './pages/reviewPage';
+import FriendReview from './pages/friendReviews';
+import RecentlyListened from './pages/recentListened';
+import RecentlyReviewed from './pages/recentReviewed';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Music" element={<Musicpage />} />
           <Route path="/Review" element={<Reviewpage />} />
+          <Route path="/FriendReviews" element={<FriendReview />} />
+          <Route path="/RecentlyListened" element={<RecentlyListened />} />
+          <Route path="/RecentlyReviewed" element={<RecentlyReviewed />} />
         </Routes>
       </BrowserRouter>
     </div>
