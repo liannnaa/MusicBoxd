@@ -17,20 +17,30 @@ const Profile = () => {
                     User
                 </span>
                 <div className="profile-social">
-                    <span className="profile-follow">
+                    <button className="profile-follow">
                         1 Followers
-                    </span>
-                    <span className="profile-follow">
+                    </button>
+                    <button className="profile-follow">
                         1 Following
-                    </span>
+                    </button>
                 </div>
                 <div className="profile-stats">
-                    <span className="profile-nums">
-                        1 1 1 1
-                    </span>
-                    <span className="profile-categories">
-                        Total Albums  Albums This Year  Lists  Review
-                    </span>
+                    <div className="profile-stats-sec">
+                        <span className="profile-num">1</span>
+                        <span className="profile-cat">Total Albums</span>
+                    </div>
+                    <div className="profile-stats-sec">
+                        <span className="profile-num">1</span>
+                        <span className="profile-cat">Albums This Year</span>
+                    </div>
+                    <div className="profile-stats-sec">
+                        <span className="profile-num">1</span>
+                        <span className="profile-cat">Lists</span>
+                    </div>
+                    <div className="profile-stats-sec">
+                        <span className="profile-num">1</span>
+                        <span className="profile-cat">Review</span>
+                    </div>
                 </div>
             </div>
             <span className="profile-section-title">

@@ -45,28 +45,60 @@ body, html {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
+    margin-bottom: 1vh;
 }
 
 .profile-username {
     font-size: 1.5rem;
+    margin-bottom: 1vh;
 }
 
 .profile-follow {
     font-size: .8rem;
     margin-left: 5vw;
     margin-right: 5vw;
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: 2px solid #e9a6a6;
+    outline-offset: 1px;
+    border-radius: 10px;
+    margin-bottom: 1vh;
 }
 
 .profile-stats {
-    
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    width: 80%;
 }
 
-.profile-nums {
-   
+.profile-stats-sec {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.profile-categories {
-    
+.profile-num {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.profile-stats-sec:nth-child(odd) .profile-num {
+    color: #e9a6a6;
+}
+
+.profile-stats-sec:nth-child(even) .profile-num {
+    color: #9C4A8B;
+}
+
+.profile-cat {
+    flex: 1;
+    text-align: center;
+    font-size: .7rem;
 }
 
 .profile-section-title {
