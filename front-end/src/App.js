@@ -24,7 +24,7 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Home" element={<Homepage />} />
           <Route path="/Profile" element={<Profile />} />
-          <Route path="/Music" element={<Album />} />
+          <Route path="/Album" element={<Album />} />
           <Route path="/Artist" element={<Artist />} />
           <Route path="/Review" element={<Reviewpage />} />
           <Route path="/FriendReviews" element={<FriendReview />} />
