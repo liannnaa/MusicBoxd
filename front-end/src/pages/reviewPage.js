@@ -11,10 +11,6 @@ const Review = () => {
     navigate("/Album");
   }
 
-  const navigateToProfile = () => {
-    navigate("/Profile");
-  }
-
   return (
     <div className="review">
         <div className="review-top">
@@ -44,7 +40,7 @@ const Review = () => {
             <img className="review-cover" src={Placeholder} alt="album" />
         </div>
         <textarea className="review-input" placeholder="Write down your review..."></textarea>
-        <button className="review-button" onClick={navigateToProfile} >
+        <button className="review-button" onClick={navigateToAlbum} >
             <span className="review-button-text">
                 Publish
             </span>
