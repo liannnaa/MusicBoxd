@@ -9,37 +9,37 @@ import Placeholder from '../assets/placeholder.PNG';
 
 const Review = () => {
     return (
-    <div className='review'>
-        <div className="review-card">
-            <img className="review-pp" src={Placeholder} alt="pp" />
-            <div className="review-contents">
-                <span className="review-title">
+    <div className='reviewMini'>
+        <div className="reviewMini-card">
+            <img className="reviewMini-pp" src={Placeholder} alt="pp" />
+            <div className="reviewMini-contents">
+                <span className="reviewMini-title">
                     Title
                 </span>
-                <div className="review-info">
-                    <span className="review-user">
+                <div className="reviewMini-info">
+                    <span className="reviewMini-user">
                         Review by{" "}
-                        <span className="review-username">
+                        <span className="reviewMini-username">
                             User
                         </span>
                     </span>
-                    <img className="review-stars" src={stars} alt="stars" />
-                    <img className="review-comment" src={comment} alt="comment" />
-                    <span className="review-num">
+                    <img className="reviewMini-stars" src={stars} alt="stars" />
+                    <img className="reviewMini-comment" src={comment} alt="comment" />
+                    <span className="reviewMini-num">
                         1
                     </span>
                 </div>
-                <span className="review-album-review">
+                <span className="reviewMini-album-review">
                     Album Review
                 </span>
-                <div className="review-expand">
-                    <span className="review-read-more">
+                <div className="reviewMini-expand">
+                    <span className="reviewMini-read-more">
                         Read More
                     </span>
-                    <img className="review-arrow" src={arrow} alt="arrow" />
+                    <img className="reviewMini-arrow" src={arrow} alt="arrow" />
                 </div>
             </div>
-            <img className="review-album" src={Placeholder} alt="album" />
+            <img className="reviewMini-album" src={Placeholder} alt="album" />
         </div>
     </div>
   );

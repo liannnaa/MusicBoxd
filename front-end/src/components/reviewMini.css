@@ -1,4 +1,4 @@
-.review {
+.reviewMini {
     color: #fff;
     flex-direction: row;
     justify-content: flex-start;
@@ -10,7 +10,7 @@
     margin-bottom: 1vh;
 }
 
-.review-card {
+.reviewMini-card {
     height: 100%;
     background-color: #e9a6a60d;
     border-radius: 10px;
@@ -22,7 +22,7 @@
     display: flex;
 }
   
-.review-pp {
+.reviewMini-pp {
     width: 28px;
     height: 28px;
     object-fit: cover;
@@ -31,7 +31,7 @@
     border-radius: 50%;
 }
   
-.review-contents {
+.reviewMini-contents {
     height: 90%;
     flex-direction: column;
     flex-basis: 67%;
@@ -41,13 +41,13 @@
     display: flex;
 }
   
-.review-title {
+.reviewMini-title {
     color: #e9a6a6;
     align-self: flex-start;
     font-size: .438rem;
 }
   
-.review-info {
+.reviewMini-info {
     color: #ffffff80;
     width: 100%;
     flex-direction: row;
@@ -57,25 +57,25 @@
     display: flex;
 }
   
-.review-user {
+.reviewMini-user {
     color: #fff;
     align-self: flex-start;
     font-size: .438rem;
     font-weight: 400;
 }
 
-.review-username {
+.reviewMini-username {
     color: #e9a6a6;
 }
 
-.review-stars {
+.reviewMini-stars {
     width: 20px;
     height: 5px;
     object-fit: cover;
     align-self: flex-start;
     margin-left: 1vw;
 }
-.review-comment {
+.reviewMini-comment {
     width: 5px;
     height: 5px;
     object-fit: cover;
@@ -83,17 +83,17 @@
     margin-left: 1vw;
   }
   
-.review-num {
+.reviewMini-num {
     align-self: center;
     margin-left: .5vw;
 }
   
-.review-album-review {
+.reviewMini-album-review {
     align-self: flex-start;
     font-weight: 400;
 }
   
-.review-expand {
+.reviewMini-expand {
     color: #9c4a8b;
     width: 100%;
     flex-direction: row;
@@ -104,18 +104,18 @@
     display: flex;
 }
   
-.review-read-more {
+.reviewMini-read-more {
     align-self: flex-start;
 }
   
-.review-arrow {
+.reviewMini-arrow {
     width: 2px;
     height: 3px;
     object-fit: cover;
     align-self: center;
 }
 
-.review-album {
+.reviewMini-album {
     width: 58px;
     height: 58px;
     object-fit: cover;
