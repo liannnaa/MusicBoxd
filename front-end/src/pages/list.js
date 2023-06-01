@@ -5,7 +5,7 @@ import "./list.css";
 import Placeholder from '../assets/placeholder.PNG';
 
 import Album from '../components/albumMini';
-import Review from '../components/reviewMini';
+import Comment from '../components/commentMini';
 
 const List = () => {
     const navigate = useNavigate();
@@ -64,9 +64,9 @@ const List = () => {
                 Comments
             </span>
             <div className="list-comments">
-                <Review />
-                <Review />
-                <Review />
+                <Comment />
+                <Comment />
+                <Comment />
             </div>
         </div>
     );
