@@ -14,6 +14,7 @@ import FriendReview from './pages/friendReviews';
 import RecentlyListened from './pages/recentListened';
 import RecentlyReviewed from './pages/recentReviewed';
 import List from './pages/list';
+import Comment from './pages/comment';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Artist" element={<Artist />} />
           <Route path="/Review" element={<Reviewpage />} />
           <Route path="/List" element={<List />} />
+          <Route path="/Comment" element={<Comment />} />
           <Route path="/FriendReviews" element={<FriendReview />} />
           <Route path="/RecentlyListened" element={<RecentlyListened />} />
           <Route path="/RecentlyReviewed" element={<RecentlyReviewed />} />
