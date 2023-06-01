@@ -2,14 +2,21 @@ import React from 'react';
 import "./listMini.css";
 
 import heart from '../assets/heart.svg';
+import { useNavigate } from 'react-router-dom';
 import comment from '../assets/comment.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
 
 const ListMini = () => {
+    const navigate = useNavigate();
+
+    const navigateToList = () => {
+        navigate("/List");
+    }
+
     return (
-    <div className="listMini">
-        <img className="listMini-image" src={Placeholder} alt="list" />
+    <div className="listMini" >
+        <img className="listMini-image" src={Placeholder} alt="list" onClick={navigateToList} />
         <span className="listMini-title">
             List Title
         </span>
