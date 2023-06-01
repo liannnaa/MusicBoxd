@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./homepage.css";
 
 import hamburger from '../assets/hamburger.svg';
@@ -12,6 +13,12 @@ import SideBar from "../components/sidebar";
 import Menu from "../components/menu";
 
 const Homepage = () => {
+    const navigate = useNavigate();
+
+    const navigateToAlbums = () => {
+        navigate("/Albums");
+    }
+
     const [showUserInformation, setShowUserInformation] = useState(false);
 
     return (
@@ -30,7 +37,7 @@ const Homepage = () => {
             <span className="homepage-intro">
                 Review or track music you’ve listened to...
             </span>
-            <span className="homepage-section-title">
+            <span className="homepage-section-title" onClick={navigateToAlbums} >
                 Popular Albums This Month
             </span>
             <div className="homepage-section-contents">
