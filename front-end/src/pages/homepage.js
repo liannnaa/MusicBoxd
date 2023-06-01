@@ -19,6 +19,10 @@ const Homepage = () => {
         navigate("/Albums");
     }
 
+    const navigateToLists = () => {
+        navigate("/Lists");
+    }
+
     const [showUserInformation, setShowUserInformation] = useState(false);
 
     return (
@@ -45,7 +49,7 @@ const Homepage = () => {
                 <PopularAlbum/>
                 <PopularAlbum/>
             </div>
-            <span className="homepage-section-title">
+            <span className="homepage-section-title" onClick={navigateToLists}>
                 Popular Lists This Month
             </span>
             <div className="homepage-section-contents">

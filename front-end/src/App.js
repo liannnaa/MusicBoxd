@@ -16,6 +16,7 @@ import RecentlyReviewed from './pages/recentReviewed';
 import List from './pages/list';
 import Comment from './pages/comment';
 import Albums from './pages/albums';
+import Lists from './pages/lists';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/List" element={<List />} />
           <Route path="/Comment" element={<Comment />} />
           <Route path="/Albums" element={<Albums />} />
+          <Route path="/Lists" element={<Lists />} />
           <Route path="/FriendReviews" element={<FriendReview />} />
           <Route path="/RecentlyListened" element={<RecentlyListened />} />
           <Route path="/RecentlyReviewed" element={<RecentlyReviewed />} />
