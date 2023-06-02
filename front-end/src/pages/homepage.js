@@ -34,7 +34,7 @@ const Homepage= () => {
 
     useEffect(() => {
         axios
-          .get("https://my.api.mockaroo.com/album.json?key=3959b8a0")
+          .get(`https://my.api.mockaroo.com/album.json?key=${process.env.REACT_APP_MOCKAROO}`)
           .then((response) => {
             let parsedData = Papa.parse(response.data, {
                 header: true,
