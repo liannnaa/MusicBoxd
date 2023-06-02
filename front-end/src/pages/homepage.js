@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import Papa from 'papaparse';
 import "./homepage.css";
 
 import hamburger from '../assets/hamburger.svg';
@@ -12,7 +14,7 @@ import RecentReview from "../components/reviewMini";
 import SideBar from "../components/sidebar";
 import Menu from "../components/menu";
 
-const Homepage = () => {
+const Homepage= () => {
     const navigate = useNavigate();
 
     const navigateToAlbums = () => {
@@ -28,7 +30,21 @@ const Homepage = () => {
     }
 
     const [showUserInformation, setShowUserInformation] = useState(false);
+    const [albums, setAlbums] = useState([]);
 
+    useEffect(() => {
+        axios
+          .get("https://my.api.mockaroo.com/album.json?key=3959b8a0")
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setAlbums(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);      
+    
     return (
         <div className="homepage">
             <div className="homepage-heading">
@@ -49,9 +65,9 @@ const Homepage = () => {
                 Popular Albums This Month
             </span>
             <div className="homepage-section-contents">
-                <PopularAlbum/>
-                <PopularAlbum/>
-                <PopularAlbum/>
+                {albums.map((album) => (
+                    <PopularAlbum key={album.id} album={album} />
+                ))}
             </div>
             <span className="homepage-section-title" onClick={navigateToLists}>
                 Popular Lists This Month
@@ -75,4 +91,5 @@ const Homepage = () => {
         </div>
     );
 };
+
 export default Homepage;
