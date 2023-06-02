@@ -7,15 +7,15 @@ import Menu from "../components/menu";
 const Albums = () => {
     return (
         <div className="albums">
-            <span className="album-title">
+            <span className="albums-title">
                 Popular Albums
             </span>
-            <div className="album-mini">
+            <div className="albums-mini">
                 <Album/>
                 <Album/>
                 <Album/>
             </div>
-            <div className="album-menu">
+            <div className="albums-menu">
                 <Menu/>
             </div>
         </div>

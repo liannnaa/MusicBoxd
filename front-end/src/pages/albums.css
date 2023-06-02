@@ -27,11 +27,11 @@ body, html {
     color: #fff;
 }
 
-.album-title {
+.albums-title {
     font-size: 2rem;
     margin-bottom: 3vh;
 }
 
-.album-mini {
+.albums-mini {
     display: flex;
 }

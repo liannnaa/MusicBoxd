@@ -1,0 +1,37 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1f1d36;}
+
+.friend-reviews {
+    width: 100vw;
+    display: flex;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    box-sizing: border-box;
+    font-family: Open Sans, Arial;
+    color: #fff;
+}
+
+.friend-reviews-title {
+    font-size: 2rem;
+    margin-bottom: 3vh;
+}
+
+.friend-reviews-mini {
+    width: 100%;
+}

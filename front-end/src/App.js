@@ -15,6 +15,7 @@ import Comment from './pages/comment';
 import Albums from './pages/albums';
 import Lists from './pages/lists';
 import UserReview from './pages/userReviewed';
+import FullReview from './pages/fullReview';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/Lists" element={<Lists />} />
           <Route path="/FriendReviews" element={<FriendReview />} />
           <Route path="/UserReviews" element={<UserReview />} />
+          <Route path="/FullReview" element={<FullReview />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -23,6 +23,10 @@ const Homepage = () => {
         navigate("/Lists");
     }
 
+    const navigateToReviews = () => {
+        navigate("/FriendReviews");
+    }
+
     const [showUserInformation, setShowUserInformation] = useState(false);
 
     return (
@@ -57,7 +61,7 @@ const Homepage = () => {
                 <PopularList/>
                 <PopularList/>
             </div>
-            <span className="homepage-section-title">
+            <span className="homepage-section-title" onClick={navigateToReviews} >
                 Recent Friend's Reviews
             </span>
             <div className="homepage-reviews">

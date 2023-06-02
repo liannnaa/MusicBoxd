@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./reviewMini.css";
 
 import stars from '../assets/stars.svg';
@@ -8,9 +9,15 @@ import arrow from '../assets/arrowRight.svg';
 import Placeholder from '../assets/placeholder.PNG';
 
 const Review = () => {
+    const navigate = useNavigate();
+
+    const navigateToReviews = () => {
+        navigate("/Reviews");
+    }
+
     return (
     <div className='reviewMini'>
-        <div className="reviewMini-card">
+        <div className="reviewMini-card"onClick={navigateToReviews} >
             <img className="reviewMini-pp" src={Placeholder} alt="pp" />
             <div className="reviewMini-contents">
                 <span className="reviewMini-title">
