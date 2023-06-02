@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./profile.css";
 
 import Placeholder from '../assets/placeholder.PNG';
@@ -8,6 +9,11 @@ import RecentReview from "../components/reviewMini";
 import Menu from "../components/menu";
 
 const Profile = () => {
+    const navigate = useNavigate();
+
+    const navigateToReviews = () => {
+        navigate("/UserReviews");
+    }
     return (
         <div className="profile">
             <img className="profile-banner" src={Placeholder} alt="banner" />
@@ -59,7 +65,7 @@ const Profile = () => {
                 <AlbumCover/>
                 <AlbumCover/>
             </div>
-            <span className="profile-section-title">
+            <span className="profile-section-title" onClick={navigateToReviews} >
                 User's Recent Reviewed
             </span>
             <div className="profile-reviews">

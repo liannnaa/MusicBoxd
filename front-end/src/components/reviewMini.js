@@ -12,7 +12,7 @@ const Review = () => {
     const navigate = useNavigate();
 
     const navigateToReviews = () => {
-        navigate("/Reviews");
+        navigate("/FullReview");
     }
 
     return (
