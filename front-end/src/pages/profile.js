@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import Papa from 'papaparse';
 import "./profile.css";
 
 import Placeholder from '../assets/placeholder.PNG';
@@ -14,6 +16,22 @@ const Profile = () => {
     const navigateToReviews = () => {
         navigate("/UserReviews");
     }
+
+    const [albums, setAlbums] = useState([]);
+
+    useEffect(() => {
+        axios
+        .get(`https://my.api.mockaroo.com/album.json?key=${process.env.REACT_APP_MOCKAROO}`)
+        .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setAlbums(parsedData.data);
+        })
+        .catch((error) => console.error(`Error: ${error}`));
+    }, []);   
+
     return (
         <div className="profile">
             <img className="profile-banner" src={Placeholder} alt="banner" />
@@ -53,17 +71,17 @@ const Profile = () => {
                 User's Favorite Albums
             </span>
             <div className="profile-section-contents">
-                <AlbumCover/>
-                <AlbumCover/>
-                <AlbumCover/>
+                {albums.map((album) => (
+                    <AlbumCover key={album.id} album={album} />
+                ))}
             </div>
             <span className="profile-section-title">
                 User's Recent Listened
             </span>
             <div className="profile-section-contents">
-                <AlbumCover/>
-                <AlbumCover/>
-                <AlbumCover/>
+                {albums.map((album) => (
+                    <AlbumCover key={album.id} album={album} />
+                ))}
             </div>
             <span className="profile-section-title" onClick={navigateToReviews} >
                 User's Recent Reviewed
