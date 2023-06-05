@@ -72,18 +72,32 @@ const Homepage= () => {
           })
           .catch((error) => console.error(`Error: ${error}`));
     }, []);
+
+    const [user, setUser] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/user.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setUser(parsedData.data[0]);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
     
     return (
         <div className="homepage">
             <div className="homepage-heading">
                 <img className="homepage-hamburger" src={hamburger} alt="hamburger" onClick={() => setShowUserInformation(!showUserInformation)} />
-                <img className="homepage-pp" src={Placeholder} alt="profile" />
+                <img className="homepage-pp" src={user.profile || Placeholder} alt="profile" />
             </div>
-            {showUserInformation && <SideBar hideSidebar={() => setShowUserInformation(false)} />}
+            {showUserInformation && <SideBar hideSidebar={() => setShowUserInformation(false)} user={user} />}
             <span className="homepage-hello">
                 Hello,{" "}
                 <span className="homepage-username">
-                    User
+                    {user.name || "User Name"}
                 </span>!
             </span>
             <span className="homepage-intro">
@@ -93,7 +107,7 @@ const Homepage= () => {
                 Popular Albums This Month
             </span>
             <div className="homepage-section-contents">
-                {albums.map((album) => (
+                {albums.slice(0, 3).map((album) => (
                     <PopularAlbum key={album.id} album={album} />
                 ))}
             </div>
@@ -101,7 +115,7 @@ const Homepage= () => {
                 Popular Lists This Month
             </span>
             <div className="homepage-section-contents">
-                {lists.map((list) => (
+                {lists.slice(0, 3).map((list) => (
                     <PopularList key={list.id} list={list} />
                 ))}
             </div>
@@ -109,7 +123,7 @@ const Homepage= () => {
                 Recent Friend's Reviews
             </span>
             <div className="homepage-reviews">
-                {reviews.map((review) => (
+                {reviews.slice(0, 3).map((review) => (
                     <RecentReview key={review.id} review={review} />
                 ))}
             </div>

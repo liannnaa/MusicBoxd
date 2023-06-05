@@ -48,27 +48,41 @@ const List = () => {
           .catch((error) => console.error(`Error: ${error}`));
     }, []);
 
+    const [list, setList] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/list.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setList(parsedData.data[0]);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+
     return (
         <div className="list">
             <img className="list-back" src={Placeholder} alt="arrow" onClick={navigateToHome} />
             <div className="list-heading">
-                <img className="list-cover" src={Placeholder} alt="cover" />
+                <img className="list-cover" src={list.cover || Placeholder} alt="cover" />
                 <div className="list-heading-right">
                     <div className="list-head">
                         <span className="list-title">
-                            List
+                            {list.title || "List"}
                         </span>
                     </div>
                     <span className="list-user">
-                        User
+                        {list.user || "User"}
                     </span>
                     <span className="list-description">
-                        Description
+                        {list.description || "Description"}
                     </span>
                     <span className="list-likes">
                         Likes:{" "}
                         <span className="list-num">
-                            1
+                            {list.hearts || "1"}
                         </span>
                     </span>
                 </div>
@@ -86,7 +100,7 @@ const List = () => {
                 </button>
             </div>
             <div className="list-albums">
-                {albums.map((album) => (
+                {albums.slice(0, 3).map((album) => (
                     <Album key={album.id} album={album} />
                 ))}
             </div>
@@ -94,7 +108,7 @@ const List = () => {
                 Comments
             </span>
             <div className="list-comments">
-                {comments.map((comment) => (
+                {comments.slice(0, 3).map((comment) => (
                     <Comment key={comment.id} comment={comment} />
                 ))}
             </div>

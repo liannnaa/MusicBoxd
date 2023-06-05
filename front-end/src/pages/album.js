@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import Papa from 'papaparse';
 import "./album.css";
 
 import Placeholder from '../assets/placeholder.PNG';
@@ -17,30 +19,58 @@ const Album = () => {
         navigate("/Review");
     }
 
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/review.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setReviews(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+
+    const [album, setAlbum] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/album.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setAlbum(parsedData.data[0]);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+
     return (
         <div className="album">
             <img className="album-back" src={Placeholder} alt="arrow" onClick={navigateToHome} />
             <div className="album-heading">
-                <img className="album-cover" src={Placeholder} alt="cover" />
+                <img className="album-cover" src={album.cover || Placeholder} alt="cover" />
                 <div className="album-heading-right">
                     <div className="album-head">
                         <span className="album-title">
-                            Album
+                            {album.title || "Album Title"}
                         </span>
                         <span className="album-year">
-                            Year
+                            {album.year || "Album Year"}
                         </span>
                     </div>
                     <span className="album-artist">
-                        Artist
+                        {album.artist || "Album Artist"}
                     </span>
                     <span className="album-description">
-                        Description
+                        {album.description || "Album Description"}
                     </span>
                     <span className="album-rating">
                         Rating:{" "}
                         <span className="album-num">
-                            1
+                            {album.rating || 1}
                         </span>
                     </span>
                 </div>
@@ -66,9 +96,9 @@ const Album = () => {
                 All Reviews
             </span>
             <div className="album-reviews">
-                <Review />
-                <Review />
-                <Review />
+                {reviews.slice(0, 3).map((review) => (
+                    <Review key={review.id} review={review} />
+                ))}
             </div>
         </div>
     );

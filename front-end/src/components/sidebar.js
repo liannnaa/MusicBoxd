@@ -12,19 +12,19 @@ import Lists from '../assets/list.svg';
 import Likes from '../assets/likes.svg';
 import Logout from '../assets/logout.svg';
 
-const Sidebar = ({ hideSidebar }) => {
+const Sidebar = ({ hideSidebar, user }) => {
     return (
         <div className="sidebar">
             <div className="sidebar-contents">
                 <img className="sidebar-hamburger" src={Hamburger} alt="hamburger" onClick={hideSidebar} />
                 <div className="sidebar-profile">
-                    <img className="sidebar-pp" src={Placeholder} alt="profile" />
+                    <img className="sidebar-pp" src={user.profile || Placeholder} alt="profile" />
                     <div className="sidebar-usernames">
                         <span className="sidebar-name">
-                            User
+                            {user.name || "User"}
                         </span>
                         <span className="sidebar-user">
-                            @user
+                            @{user.user || "user"}
                         </span>
                     </div>
                 </div>
@@ -32,14 +32,14 @@ const Sidebar = ({ hideSidebar }) => {
                     <button className="sidebar-follow">
                         <div className="sidebar-follow-outline">
                             <span className="sidebar-follow-text">
-                                1 Followers
+                                {user.followers || "1"} Followers
                             </span>
                         </div>
                     </button>
                     <button className="sidebar-follow">
                         <div className="sidebar-follow-outline">
                             <span className="sidebar-follow-text">
-                                1 Following
+                                {user.following || "1"} Following
                             </span>
                         </div>
                     </button>

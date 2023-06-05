@@ -55,19 +55,10 @@ body, html {
     width: 40vw;
 }
 
-.review-name {
-    margin-bottom: 1vh;
-}
-
 .review-title {
     font-size: 20px;
-    margin-right: 3vw;
     color: #e9a6a6;
-}
-
-.review-year {
     margin-bottom: 1vh;
-    font-size: 10px;
 }
 
 .review-sub {
