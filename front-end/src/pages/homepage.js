@@ -57,7 +57,21 @@ const Homepage= () => {
             setReviews(parsedData.data);
           })
           .catch((error) => console.error(`Error: ${error}`));
-    }, []);  
+    }, []);
+    
+    const [lists, setLists] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/list.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setLists(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
     
     return (
         <div className="homepage">
@@ -87,9 +101,9 @@ const Homepage= () => {
                 Popular Lists This Month
             </span>
             <div className="homepage-section-contents">
-                <PopularList/>
-                <PopularList/>
-                <PopularList/>
+                {lists.map((list) => (
+                    <PopularList key={list.id} list={list} />
+                ))}
             </div>
             <span className="homepage-section-title" onClick={navigateToReviews} >
                 Recent Friend's Reviews

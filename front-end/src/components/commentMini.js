@@ -5,17 +5,17 @@ import arrow from '../assets/arrowRight.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
 
-const Comment = () => {
+const Comment = ({comment}) => {
     return (
     <div className='commentMini'>
         <div className="commentMini-card">
-            <img className="commentMini-pp" src={Placeholder} alt="pp" />
+            <img className="commentMini-pp" src={comment.profile || Placeholder} alt="pp" />
             <div className="commentMini-contents">
                 <span className="commentMini-title">
-                    User
+                    {comment.commenter || "Commenter"}
                 </span>
                 <span className="commentMini-comment">
-                    List Comment
+                    {comment.comment || "List Comment"}
                 </span>
                 <div className="commentMini-expand">
                     <span className="commentMini-read-more">
@@ -24,7 +24,7 @@ const Comment = () => {
                     <img className="commentMini-arrow" src={arrow} alt="arrow" />
                 </div>
             </div>
-            <img className="commentMini-cover" src={Placeholder} alt="cover" />
+            <img className="commentMini-cover" src={comment.cover || Placeholder} alt="cover" />
         </div>
     </div>
   );

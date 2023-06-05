@@ -7,7 +7,7 @@ import comment from '../assets/comment.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
 
-const ListMini = () => {
+const ListMini = ({list}) => {
     const navigate = useNavigate();
 
     const navigateToList = () => {
@@ -16,22 +16,22 @@ const ListMini = () => {
 
     return (
     <div className="listMini" >
-        <img className="listMini-image" src={Placeholder} alt="list" onClick={navigateToList} />
+        <img className="listMini-image" src={list.cover || Placeholder} alt="list" onClick={navigateToList} />
         <span className="listMini-title">
-            List Title
+            {list.title || "List Title"}
         </span>
         <span className="listMini-user">
-            <img className="listMini-pp" src={Placeholder} alt="profile" />
+            <img className="listMini-pp" src={list.profile || Placeholder} alt="profile" />
             <span className="listMini-name">
-                User
+                {list.user || "User"}
             </span>
             <img className="listMini-heart" src={heart} alt="heart" />
             <span className="listMini-num">
-                1
+                {list.hearts || "1"}
             </span>
             <img className="listMini-comment" src={comment} alt="comment" />
             <span className="listMini-num">
-                1
+                {list.comments || "1"}
             </span>
         </span>
     </div>

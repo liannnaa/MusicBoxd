@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import Papa from 'papaparse';
 import "./list.css";
 
 import Placeholder from '../assets/placeholder.PNG';
@@ -17,6 +19,34 @@ const List = () => {
     const navigateToComment = () => {
         navigate("/Comment");
     }
+
+    const [albums, setAlbums] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/album.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setAlbums(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+
+    const [comments, setComments] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/comment.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setComments(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
 
     return (
         <div className="list">
@@ -56,17 +86,17 @@ const List = () => {
                 </button>
             </div>
             <div className="list-albums">
-                <Album />
-                <Album />
-                <Album />
+                {albums.map((album) => (
+                    <Album key={album.id} album={album} />
+                ))}
             </div>
             <span className="list-comment-title">
                 Comments
             </span>
             <div className="list-comments">
-                <Comment />
-                <Comment />
-                <Comment />
+                {comments.map((comment) => (
+                    <Comment key={comment.id} comment={comment} />
+                ))}
             </div>
         </div>
     );
