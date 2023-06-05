@@ -10,10 +10,6 @@ const Album = ({album}) => {
     const navigateToAlbum = () => {
         navigate("/Album");
     }
-
-    if (!album) {
-        return null;
-    }
     
     return (
     <div className="albumMini">

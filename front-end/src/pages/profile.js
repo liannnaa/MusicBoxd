@@ -18,7 +18,6 @@ const Profile = () => {
     }
 
     const [albums, setAlbums] = useState([]);
-
     useEffect(() => {
         axios
         .get(`https://my.api.mockaroo.com/album.json?key=${process.env.REACT_APP_MOCKAROO}`)
@@ -30,7 +29,21 @@ const Profile = () => {
             setAlbums(parsedData.data);
         })
         .catch((error) => console.error(`Error: ${error}`));
-    }, []);   
+    }, []);
+
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/review.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setReviews(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
 
     return (
         <div className="profile">
@@ -87,9 +100,9 @@ const Profile = () => {
                 User's Recent Reviewed
             </span>
             <div className="profile-reviews">
-                <RecentReview/>
-                <RecentReview/>
-                <RecentReview/>
+                {reviews.map((review) => (
+                    <RecentReview key={review.id} review={review} />
+                ))}
             </div>
             <div className="profile-section-contents">
                 <Menu/>

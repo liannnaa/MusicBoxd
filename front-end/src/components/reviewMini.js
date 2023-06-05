@@ -8,7 +8,7 @@ import arrow from '../assets/arrowRight.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
 
-const Review = () => {
+const Review = ({review}) => {
     const navigate = useNavigate();
 
     const navigateToReviews = () => {
@@ -18,26 +18,26 @@ const Review = () => {
     return (
     <div className='reviewMini'>
         <div className="reviewMini-card"onClick={navigateToReviews} >
-            <img className="reviewMini-pp" src={Placeholder} alt="pp" />
+            <img className="reviewMini-pp" src={review.profile || Placeholder} alt="pp" />
             <div className="reviewMini-contents">
                 <span className="reviewMini-title">
-                    Title
+                    {review.title || "Album Title"}
                 </span>
                 <div className="reviewMini-info">
                     <span className="reviewMini-user">
                         Review by{" "}
                         <span className="reviewMini-username">
-                            User
+                            {review.reviewer || "Reviewer"}
                         </span>
                     </span>
                     <img className="reviewMini-stars" src={stars} alt="stars" />
                     <img className="reviewMini-comment" src={comment} alt="comment" />
                     <span className="reviewMini-num">
-                        1
+                        {review.rating || "1"}
                     </span>
                 </div>
                 <span className="reviewMini-album-review">
-                    Album Review
+                    {review.review || "Album Review"}
                 </span>
                 <div className="reviewMini-expand">
                     <span className="reviewMini-read-more">
@@ -46,7 +46,7 @@ const Review = () => {
                     <img className="reviewMini-arrow" src={arrow} alt="arrow" />
                 </div>
             </div>
-            <img className="reviewMini-album" src={Placeholder} alt="album" />
+            <img className="reviewMini-album" src={review.cover || Placeholder} alt="album" />
         </div>
     </div>
   );

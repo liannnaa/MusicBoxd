@@ -30,8 +30,8 @@ const Homepage= () => {
     }
 
     const [showUserInformation, setShowUserInformation] = useState(false);
+    
     const [albums, setAlbums] = useState([]);
-
     useEffect(() => {
         axios
           .get(`https://my.api.mockaroo.com/album.json?key=${process.env.REACT_APP_MOCKAROO}`)
@@ -43,7 +43,21 @@ const Homepage= () => {
             setAlbums(parsedData.data);
           })
           .catch((error) => console.error(`Error: ${error}`));
-    }, []);      
+    }, []);
+    
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/review.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setReviews(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);  
     
     return (
         <div className="homepage">
@@ -81,9 +95,9 @@ const Homepage= () => {
                 Recent Friend's Reviews
             </span>
             <div className="homepage-reviews">
-                <RecentReview/>
-                <RecentReview/>
-                <RecentReview/>
+                {reviews.map((review) => (
+                    <RecentReview key={review.id} review={review} />
+                ))}
             </div>
             <div className="homepage-section-contents">
                 <Menu/>
