@@ -15,6 +15,14 @@ const Review = ({review}) => {
         navigate("/FullReview");
     }
 
+    const maxLength = 100;
+    const truncate = (input) => {
+        if (input.length > maxLength) {
+             return input.substring(0, maxLength) + '...';
+        }
+        return input;
+    };
+
     return (
     <div className='reviewMini'>
         <div className="reviewMini-card"onClick={navigateToReviews} >
@@ -37,7 +45,7 @@ const Review = ({review}) => {
                     </span>
                 </div>
                 <span className="reviewMini-album-review">
-                    {review.review || "Album Review"}
+                    {truncate(review.review) || "Album Review"}
                 </span>
                 <div className="reviewMini-expand">
                     <span className="reviewMini-read-more">
