@@ -1,54 +1,137 @@
-import React, { useEffect, useState, propsData } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Papa from 'papaparse';
 import "./homepage.css";
 
-import union from '../assets/union.svg';
+import hamburger from '../assets/hamburger.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
-import Cardreview from "../components/cardReview";
 
-const Homepage = () => {
+import PopularAlbum from "../components/albumMini";
+import PopularList from "../components/listMini";
+import RecentReview from "../components/reviewMini";
+import SideBar from "../components/sidebar";
+import Menu from "../components/menu";
+
+const Homepage= () => {
+    const navigate = useNavigate();
+
+    const navigateToAlbums = () => {
+        navigate("/Albums");
+    }
+
+    const navigateToLists = () => {
+        navigate("/Lists");
+    }
+
+    const navigateToReviews = () => {
+        navigate("/FriendReviews");
+    }
+
+    const [showUserInformation, setShowUserInformation] = useState(false);
+    
+    const [albums, setAlbums] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/album.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setAlbums(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+    
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/review.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setReviews(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+    
+    const [lists, setLists] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/list.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setLists(parsedData.data);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+
+    const [user, setUser] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/user.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setUser(parsedData.data[0]);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+    
     return (
-    <div className="homepage">
-        <div className="heading">
-            <img className="union" src={union} alt="union" />
-            <img className="pp" src={Placeholder} alt="profile" />
+        <div className="homepage">
+            <div className="homepage-heading">
+                <img className="homepage-hamburger" src={hamburger} alt="hamburger" onClick={() => setShowUserInformation(!showUserInformation)} />
+                <img className="homepage-pp" src={user.profile || Placeholder} alt="profile" />
+            </div>
+            {showUserInformation && <SideBar hideSidebar={() => setShowUserInformation(false)} user={user} />}
+            <span className="homepage-hello">
+                Hello,{" "}
+                <span className="homepage-username">
+                    {user.name || "User Name"}
+                </span>!
+            </span>
+            <span className="homepage-intro">
+                Review or track music you’ve listened to...
+            </span>
+            <span className="homepage-section-title" onClick={navigateToAlbums} >
+                Popular Albums This Month
+            </span>
+            <div className="homepage-section-contents">
+                {albums.slice(0, 3).map((album) => (
+                    <PopularAlbum key={album.id} album={album} />
+                ))}
+            </div>
+            <span className="homepage-section-title" onClick={navigateToLists}>
+                Popular Lists This Month
+            </span>
+            <div className="homepage-section-contents">
+                {lists.slice(0, 3).map((list) => (
+                    <PopularList key={list.id} list={list} />
+                ))}
+            </div>
+            <span className="homepage-section-title" onClick={navigateToReviews} >
+                Recent Friend's Reviews
+            </span>
+            <div className="homepage-reviews">
+                {reviews.slice(0, 3).map((review) => (
+                    <RecentReview key={review.id} review={review} />
+                ))}
+            </div>
+            <div className="homepage-section-contents">
+                <Menu/>
+            </div>
         </div>
-        <span className="hello">
-            Hello, User!
-        </span>
-        <span className="review-or-track-music-youve-list">
-            Review or track music you’ve listened to...
-        </span>
-        <span className="popular-albums-this-month">
-            Popular Albums This Month
-        </span>
-        <div className="popular-albums">
-            <img className="popular-album" src={Placeholder} alt="album1" />
-            <img className="popular-album" src={Placeholder} alt="album2" />
-            <img className="popular-album" src={Placeholder} alt="album3" />
-            <img className="popular-album" src={Placeholder} alt="album4" />
-            <img className="popular-album"src={Placeholder} alt="album5" />
-        </div>
-
-        <span className="popular-lists-this-month">
-            Popular Lists This Month
-        </span>
-        <div className="popular-lists">
-            <div className="list">
-                <img className="list-image" src={Placeholder} alt="list" />
-                <span className="list-title">List Title</span>
-            </div>
-            <div className="list">
-                <img className="list-image" src={Placeholder} alt="list" />
-                <span className="list-title">List Title</span>
-            </div>
-            <div className="list">
-                <img className="list-image" src={Placeholder} alt="list" />
-                <span className="list-title">List Title</span>
-            </div>
-      </div>
-    </div>
-  );
+    );
 };
+
 export default Homepage;

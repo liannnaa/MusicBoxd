@@ -1,13 +1,15 @@
-body {
-    overflow: hidden;
+body, html {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .homepage {
     color: #fff;
     text-align: center;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: calc(100vh - 1vh);
     background-color: #1f1d36;
     border-radius: 0;
     flex-direction: column;
@@ -16,133 +18,79 @@ body {
     font-family: Open Sans, Arial;
     font-size: .75rem;
     font-weight: 600;
-    line-height: 16px;
     display: flex;
 }
 
-.heading {
+.homepage-heading {
     width: 95%;
     flex-direction: row;
     justify-content: flex-start;
     align-self: flex-end;
     align-items: center;
-    padding-right: 20px;
     display: flex;
     position: relative;
+    margin-top: 3vh;
 }
 
-.union {
-    width: 20px;
-    height: 15px;
-    object-fit: cover;
-    align-self: center;
+.homepage-hamburger {
     position: absolute;
-    left: 20px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
 
-.pp {
+.homepage-pp {
     width: 44px;
     height: 44px;
     object-fit: cover;
     position: absolute;
-    right: 20px;
+    right: 5vw;
     border-radius: 50%;
 }
 
-.hello {
+.homepage-hello {
     align-self: flex-start;
-    margin-top: -50px;
-    margin-left: 22px;
+    margin-left: 5vw;
     font-size: 1.125rem;
     font-weight: 700;
-    line-height: 25px;
 }
 
-.review-or-track-music-youve-list {
+.homepage-username {
+    color: #e9a6a6;
+}
+
+.homepage-intro {
     align-self: flex-start;
-    margin-top: -90px;
-    margin-bottom: 10px;
-    margin-left: 21px;
+    margin-left: 5vw;
     font-size: .625rem;
     font-weight: 400;
-    line-height: 14px;
+    margin-top: -5vh;
 }
 
-.popular-albums-this-month {
+.homepage-section-title {
     align-self: flex-start;
-    margin-top: -70px;
-    margin-left: 21px;
+    margin-left: 5vw;
+    margin-top: -5vh;
 }
 
-.popular-albums {
-    width: 95%;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-self: center;
-    align-items: stretch;
-    margin-top: -100px;
-    margin-bottom: 16px;
-    display: flex;
-}
-
-.popular-album {
-    width: 58px;
-    height: 82px;
-    object-fit: cover;
-    align-self: flex-start;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 10px;
-}
-
-.popular-lists-this-month {
-    align-self: flex-start;
-    margin-top: -100px;
-    margin-left: 21px;
-}
-
-.popular-lists {
+.homepage-section-contents {
     width: 95%;
     flex-direction: row;
     justify-content: flex-start;
     align-self: flex-start;
     align-items: stretch;
-    margin-top: -100px;
-    margin-left: 28px;
-    margin-right: 333px;
-    padding-right: 29px;
+    margin-top: -7vh;
+    margin-left: 5vh;
     display: flex;
 }
 
-.list {
-    height: 100%;
+.homepage-reviews {
+    width: 90%;
     flex-direction: column;
-    justify-content: space-between;
-    align-self: flex-start;
-    align-items: center;
-    margin-right: 30px;
-    display: flex;
-}
-
-.list-image {
-    z-index: 1;
-    width: 58px;
-    height: 82px;
-    object-fit: cover;
-    align-self: flex-start;
-    border-radius: 10px;
-}
-
-.list-title {
-    color: #e9a6a6;
-    width: 100%;
-    flex-direction: row;
     justify-content: flex-start;
-    align-self: center;
+    align-self: flex-start;
     align-items: stretch;
-    margin-top: 10px;
-    font-size: .625rem;
-    line-height: 14px;
+    margin-top: -5vh;
+    margin-left: 5vw;
     display: flex;
-    text-align: center;
 }

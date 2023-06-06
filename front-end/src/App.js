@@ -7,8 +7,15 @@ import Login from './pages/login';
 import SignUp from './pages/signUp';
 import Homepage from './pages/homepage';
 import Profile from './pages/profile';
-import Musicpage from './pages/musicPage';
+import Album from './pages/album';
 import Reviewpage from './pages/reviewPage';
+import FriendReview from './pages/friendReviews';
+import List from './pages/list';
+import Comment from './pages/comment';
+import Albums from './pages/albums';
+import Lists from './pages/lists';
+import UserReview from './pages/userReviewed';
+import FullReview from './pages/fullReview';
 
 function App() {
   return (
@@ -20,8 +27,15 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Home" element={<Homepage />} />
           <Route path="/Profile" element={<Profile />} />
-          <Route path="/Music" element={<Musicpage />} />
+          <Route path="/Album" element={<Album />} />
           <Route path="/Review" element={<Reviewpage />} />
+          <Route path="/List" element={<List />} />
+          <Route path="/Comment" element={<Comment />} />
+          <Route path="/Albums" element={<Albums />} />
+          <Route path="/Lists" element={<Lists />} />
+          <Route path="/FriendReviews" element={<FriendReview />} />
+          <Route path="/UserReviews" element={<UserReview />} />
+          <Route path="/FullReview" element={<FullReview />} />
         </Routes>
       </BrowserRouter>
     </div>

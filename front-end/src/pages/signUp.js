@@ -1,27 +1,44 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './signUp.css';
-import banner from '../assets/banner.svg';
+
+import banner from '../assets/login.svg';
 import logo from '../assets/logo.PNG';
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  
+  const navigateToProfile = () => {
+    navigate("/Profile");
+  }
+  const navigateToLogin = () => {
+    navigate("/Login");
+  }
+
     return (
       <div className="sign-up">
-        <img className="banner" src={banner} alt="banner" />
-        <img className="logo" src={logo} alt="logo" />
-        <span className="sign-up-1">Sign Up</span>
-        <span className="create-an-account-to-continue">
+        <img className="sign-up-banner" src={banner} alt="banner" />
+        <img className="sign-up-logo" src={logo} alt="logo" />
+        <span className="sign-up-title">
+          Sign Up
+        </span>
+        <span className="sign-up-instructions">
           Create an account to continue.
         </span>
-        <input className="uname-box" placeholder="Username" type="text" />
-        <input className="email-box" placeholder="Email" type="text" />
-        <input className="pw-box" placeholder="Password" type="text" />
-        <button className="sign-up-button">
-          <div className="rectangle-6">
-            <span className="sign-up-2">Sign Up</span>
-          </div>
+        <input className="sign-up-input" placeholder="Username" type="text" />
+        <input className="sign-up-input" placeholder="Email" type="text" />
+        <input className="sign-up-input" placeholder="Password" type="text" />
+        <button className="sign-up-button" onClick={navigateToProfile}>
+          <span className="sign-up-button-text">
+            Sign Up
+          </span>
         </button>
-        <span className="already-have-an-account-go-to-th">
-          Already have an account? Go to the Login Page.
+        <span className="sign-up-exit">
+          Already have an account? Go to the{" "}
+          <span className="sign-up-login" onClick={navigateToLogin}>
+          Login Page
+        </span>
+        .
         </span>
       </div>
     );

@@ -1,0 +1,133 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1f1d36;}
+
+.full-review {
+    width: 100vw;
+    display: flex;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    box-sizing: border-box;
+    font-family: Open Sans, Arial;
+    color: #fff;
+}
+
+.full-review-back {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 3vw;
+}
+
+.full-review-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+.full-review-cover {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 10px;
+}
+
+.full-review-heading-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+}
+
+.full-review-head {
+    margin-bottom: 1vh;
+}
+
+.full-review-title {
+    font-size: 20px;
+    color: #e9a6a6;
+}
+
+.full-review-artist {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.full-review-user {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.full-review-description {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.full-review-rating {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.full-review-num {
+    margin-bottom: 1vh;
+    font-size: 20px;
+    color: #e9a6a6;
+}
+
+.full-review-button {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 30vw;
+    height: 5vh;
+    text-align: center;
+    color: #1f1d36;
+    background-color: #0000;
+    border: none;
+    font-family: Open Sans, Arial;
+    font-size: .775rem;
+    font-weight: 700;
+}
+
+.full-review-button-text {
+    height: 100%;
+    background-color: #e9a6a6;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-self: center;
+}
+
+.full-review-review-title {
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    font-size: 20px;
+}
+
+.full-review-reviews {
+    width: 90%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    align-items: stretch;
+    margin-left: 5vw;
+    display: flex;
+}

@@ -1,0 +1,124 @@
+.reviewMini {
+    color: #fff;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    font-family: Open Sans, Arial;
+    font-size: .375rem;
+    font-weight: 600;
+    display: flex;
+    margin-bottom: 1vh;
+}
+
+.reviewMini-card {
+    height: 100%;
+    background-color: #e9a6a60d;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-self: flex-start;
+    align-items: stretch;
+    display: flex;
+}
+  
+.reviewMini-pp {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    align-self: center;
+    margin-left: 3vw;
+    border-radius: 50%;
+}
+  
+.reviewMini-contents {
+    height: 90%;
+    flex-direction: column;
+    flex-basis: 67%;
+    justify-content: space-between;
+    align-self: center;
+    align-items: stretch;
+    display: flex;
+}
+  
+.reviewMini-title {
+    color: #e9a6a6;
+    align-self: flex-start;
+    font-size: .438rem;
+}
+  
+.reviewMini-info {
+    color: #ffffff80;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: flex-start;
+    align-items: stretch;
+    display: flex;
+}
+  
+.reviewMini-user {
+    color: #fff;
+    align-self: flex-start;
+    font-size: .438rem;
+    font-weight: 400;
+}
+
+.reviewMini-username {
+    color: #e9a6a6;
+}
+
+.reviewMini-stars {
+    width: 20px;
+    height: 5px;
+    object-fit: cover;
+    align-self: flex-start;
+    margin-left: 1vw;
+}
+.reviewMini-comment {
+    width: 5px;
+    height: 5px;
+    object-fit: cover;
+    align-self: center;
+    margin-left: 1vw;
+  }
+  
+.reviewMini-num {
+    align-self: center;
+    margin-left: .5vw;
+}
+  
+.reviewMini-album-review {
+    align-self: flex-start;
+    font-weight: 400;
+}
+  
+.reviewMini-expand {
+    color: #9c4a8b;
+    width: 100%;
+    flex-direction: row;
+    flex-basis: 6%;
+    justify-content: flex-start;
+    align-self: flex-start;
+    align-items: center;
+    display: flex;
+}
+  
+.reviewMini-read-more {
+    align-self: flex-start;
+}
+  
+.reviewMini-arrow {
+    width: 2px;
+    height: 3px;
+    object-fit: cover;
+    align-self: center;
+}
+
+.reviewMini-album {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    align-self: flex-end;
+    border-radius: 10px;
+}

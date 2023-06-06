@@ -1,0 +1,137 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1f1d36;}
+
+.album {
+    width: 100vw;
+    display: flex;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    box-sizing: border-box;
+    font-family: Open Sans, Arial;
+    color: #fff;
+}
+
+.album-back {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 3vw;
+}
+
+.album-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+.album-cover {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 10px;
+}
+
+.album-heading-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+}
+
+.album-head {
+    margin-bottom: 1vh;
+}
+
+.album-title {
+    font-size: 20px;
+    margin-right: 3vw;
+    color: #e9a6a6;
+}
+
+.album-year {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.album-artist {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.album-description {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.album-rating {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.album-num {
+    margin-bottom: 1vh;
+    font-size: 20px;
+    color: #e9a6a6;
+}
+
+.album-buttons {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.album-button {
+    width: 30vw;
+    height: 5vh;
+    text-align: center;
+    color: #1f1d36;
+    background-color: #0000;
+    border: none;
+    font-family: Open Sans, Arial;
+    font-size: .775rem;
+    font-weight: 700;
+}
+
+.album-button-text {
+    height: 100%;
+    background-color: #e9a6a6;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-self: center;
+}
+
+.album-review-title {
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    font-size: 20px;
+}
+
+.album-reviews {
+    width: 90%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    align-items: stretch;
+    margin-left: 5vw;
+    display: flex;
+}

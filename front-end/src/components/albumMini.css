@@ -1,0 +1,41 @@
+.albumMini {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    align-items: center;
+    margin-right: 3vw;
+    display: flex;
+}
+
+.albumMini-image {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    align-self: flex-start;
+    border-radius: 10px;
+}
+
+.albumMini-title {
+    color: #e9a6a6;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: stretch;
+    margin-top: 1vh;
+    font-size: .625rem;
+    display: flex;
+    text-align: center;
+}
+
+.albumMini-artist {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: stretch;
+    font-size: .625rem;
+    display: flex;
+    text-align: center;
+}

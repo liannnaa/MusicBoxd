@@ -1,27 +1,44 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './login.css';
-import banner from '../assets/banner.svg';
+
+import banner from '../assets/login.svg';
 import logo from '../assets/logo.PNG';
 
 const Login = () => {
+  const navigate = useNavigate();
+  
+  const navigateToProfile = () => {
+    navigate("/Profile");
+  }
+  const navigateToSignUp = () => {
+    navigate("/SignUp");
+  }
+
   return (
     <div className="login">
-      <img className="banner" src={banner} alt="banner" />
-      <img className="logo" src={logo} alt="logo" />
-      <span className="login-1">Login</span>
-      <span className="please-sign-in-to-continue">
+      <img className="login-banner" src={banner} alt="banner" />
+      <img className="login-logo" src={logo} alt="logo" />
+      <span className="login-text">Login</span>
+      <span className="login-instructions">
         Please sign in to continue.
       </span>
-      <input className="uname-box" placeholder="Username" type="text" />
-      <input className="pw-box" placeholder="Password" type="text" />
-      <span className="forgot-password">Forgot Password?</span>
-      <button className="login-button">
-        <div className="rectangle-5">
-          <span className="login-2">Login</span>
-        </div>
+      <input className="login-input" placeholder="Username" type="text" />
+      <input className="login-input" placeholder="Password" type="text" />
+      <span className="login-password">
+        Forgot Password?
+      </span>
+      <button className="login-button" onClick={navigateToProfile}>
+          <span className="login-button-text">
+            Login
+          </span>
       </button>
-      <span className="dont-have-an-account-please-sign">
-        Don’t have an account? Please Sign Up first.
+      <span className="login-exit">
+        Don’t have an account? Please{" "}
+        <span className="login-sign-up" onClick={navigateToSignUp}>
+          Sign Up
+        </span>
+        {" "} first.
       </span>
     </div>
   );
