@@ -12,7 +12,7 @@
     width: 58px;
     height: 58px;
     object-fit: cover;
-    align-self: flex-start;
+    align-self: center;
     border-radius: 10px;
 }
 
@@ -20,7 +20,7 @@
     color: #e9a6a6;
     width: 100%;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-self: center;
     align-items: stretch;
     margin-top: 1vh;
