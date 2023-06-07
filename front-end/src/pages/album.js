@@ -64,9 +64,6 @@ const Album = () => {
                     <span className="album-artist">
                         {album.artist || "Album Artist"}
                     </span>
-                    <span className="album-description">
-                        {album.description || "Album Description"}
-                    </span>
                     <span className="album-rating">
                         Rating:{" "}
                         <span className="album-num">
@@ -76,8 +73,8 @@ const Album = () => {
                 </div>
             </div>
             <div className="album-buttons">
-                <button className="album-button">
-                    <span className="album-button-text" onClick={navigateToReview} >
+                <button className="album-button" onClick={navigateToReview} >
+                    <span className="album-button-text" >
                         Review
                     </span>
                 </button>

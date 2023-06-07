@@ -62,6 +62,10 @@ body, html {
 .full-review-title {
     font-size: 20px;
     color: #e9a6a6;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .full-review-artist {
@@ -77,6 +81,10 @@ body, html {
 .full-review-description {
     margin-bottom: 1vh;
     font-size: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .full-review-rating {
@@ -102,6 +110,7 @@ body, html {
     font-family: Open Sans, Arial;
     font-size: .775rem;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .full-review-button-text {

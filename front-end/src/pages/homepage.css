@@ -37,6 +37,7 @@ body, html {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .homepage-pp {
@@ -71,10 +72,11 @@ body, html {
     align-self: flex-start;
     margin-left: 5vw;
     margin-top: -5vh;
+    cursor: pointer;
 }
 
 .homepage-section-contents {
-    width: 95%;
+    width: 100%;
     flex-direction: row;
     justify-content: flex-start;
     align-self: flex-start;

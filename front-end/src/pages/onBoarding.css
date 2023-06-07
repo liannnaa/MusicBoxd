@@ -58,4 +58,5 @@ body, html {
     display: flex;
     padding: 2vh;
     border-radius: 20px;
+    cursor: pointer;
 }

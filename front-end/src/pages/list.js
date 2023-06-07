@@ -88,8 +88,8 @@ const List = () => {
                 </div>
             </div>
             <div className="list-buttons">
-                <button className="list-button">
-                    <span className="list-button-text" onClick={navigateToComment} >
+                <button className="list-button" onClick={navigateToComment} >
+                    <span className="list-button-text" >
                         Comment
                     </span>
                 </button>

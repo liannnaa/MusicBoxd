@@ -74,8 +74,8 @@ const Review = () => {
                     </span>
                 </div>
             </div>
-            <button className="full-review-button">
-                <span className="full-review-button-text" onClick={navigateToComment} >
+            <button className="full-review-button" onClick={navigateToComment} >
+                <span className="full-review-button-text" >
                     Comment
                 </span>
             </button>

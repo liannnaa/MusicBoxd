@@ -15,7 +15,7 @@ const Review = ({review}) => {
         navigate("/FullReview");
     }
 
-    const maxLength = 100;
+    const maxLength = 40;
     const truncate = (input) => {
         if (input.length > maxLength) {
              return input.substring(0, maxLength) + '...';
@@ -25,11 +25,11 @@ const Review = ({review}) => {
 
     return (
     <div className='reviewMini'>
-        <div className="reviewMini-card"onClick={navigateToReviews} >
+        <div className="reviewMini-card" onClick={navigateToReviews} >
             <img className="reviewMini-pp" src={review.profile || Placeholder} alt="pp" />
             <div className="reviewMini-contents">
                 <span className="reviewMini-title">
-                    {review.title || "Album Title"}
+                    {truncate(review.title) || "Album Title"}
                 </span>
                 <div className="reviewMini-info">
                     <span className="reviewMini-user">

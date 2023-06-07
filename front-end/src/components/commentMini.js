@@ -6,7 +6,7 @@ import arrow from '../assets/arrowRight.svg';
 import Placeholder from '../assets/placeholder.PNG';
 
 const Comment = ({comment}) => {
-    const maxLength = 100;
+    const maxLength = 50;
     const truncate = (input) => {
         if (input.length > maxLength) {
              return input.substring(0, maxLength) + '...';

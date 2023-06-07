@@ -34,4 +34,12 @@ body, html {
 
 .lists-mini {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list {
+    flex: 1 0 200px;
+    margin: 1rem;
+    padding-bottom: 2rem;
 }
