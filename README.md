@@ -1,20 +1,10 @@
 # MusicBoxd
 
-## Product Vision Statement
-A product vision, or product vision statement, describes the overarching long-term mission of your product. Vision statements are aspirational and communicate concisely where the product hopes to go and what it hopes to achieve in the long term.
+"MusicBoxd": A comprehensive social media app designed for music lovers. This platform provides an avenue for users to share, rate, and review music albums in a similar fashion to how Letterboxd operates for films. The web application is built using React.js for a fluid user interface, Node.js and Express.js for efficient back-end processing, and JavaScript to enable dynamic content.
 
-The statement should serve as a guide and reminder to all stakeholders involved in a product’s development (the product team, development, the executive staff, marketing, etc.) about the shared objective they’re trying to achieve with this product.
+Functionality includes the ability for users to create and customize their profiles, follow other music enthusiasts, connect with friends, and engage in discussions about various albums. Users can also form playlists, compile their favourite albums, and share their personal reviews and ratings on a public forum.
 
-Your vision statement should also answer the question of why you are creating a product and what your company hopes to accomplish with it in the future. As an example, Google’s vision statement is to “provide access to the world’s information in one click.”
-
-## Team Members
-- [Lianna Poblete](https://github.com/liannnaa)
-- [Bianca Cura](https://github.com/biancacura)
-
-## History of the Project
-- What is the purpose
-- When was it created
-- Why was it created
+In addition, the application aggregates reviews from other platforms and music critics, providing users with a wide range of perspectives. The integration with mainstream social media platforms like Facebook, Twitter, and Instagram allows for easy sharing of users' musical taste, reviews, and ratings, increasing the overall reach and impact of their posts. The application emphasizes the aspect of social sharing and community building, turning the solitary act of music listening into a communal experience.
 
 # Running App
 - run npm install in main directory, back-end, and front-end
