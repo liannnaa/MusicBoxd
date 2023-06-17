@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./commentMini.css";
 
 import arrow from '../assets/back.png';
@@ -6,6 +7,12 @@ import arrow from '../assets/back.png';
 import Placeholder from '../assets/placeholder.PNG';
 
 const Comment = ({comment}) => {
+    const navigate = useNavigate();
+
+    const navigateToComments = () => {
+        navigate("/FullComment");
+    }
+
     const maxLength = 50;
     const truncate = (input) => {
         if (input.length > maxLength) {
@@ -16,7 +23,7 @@ const Comment = ({comment}) => {
 
     return (
     <div className='commentMini'>
-        <div className="commentMini-card">
+        <div className="commentMini-card" onClick={navigateToComments} >
             <img className="commentMini-pp" src={comment.profile || Placeholder} alt="pp" />
             <div className="commentMini-contents">
                 <span className="commentMini-title">

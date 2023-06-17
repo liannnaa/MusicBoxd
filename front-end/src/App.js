@@ -16,6 +16,7 @@ import Albums from './pages/albums';
 import Lists from './pages/lists';
 import UserReview from './pages/userReviewed';
 import FullReview from './pages/fullReview';
+import FullComment from './pages/fullComment';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/FriendReviews" element={<FriendReview />} />
           <Route path="/UserReviews" element={<UserReview />} />
           <Route path="/FullReview" element={<FullReview />} />
+          <Route path="/FullComment" element={<FullComment />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,0 +1,88 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1f1d36;}
+
+.full-comment {
+    width: 100vw;
+    display: flex;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    box-sizing: border-box;
+    font-family: Open Sans, Arial;
+    color: #fff;
+}
+
+.full-comment-back {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 3vw;
+}
+
+.full-comment-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+.full-comment-cover {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 10px;
+}
+
+.full-comment-heading-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+}
+
+.full-comment-head {
+    margin-bottom: 1vh;
+}
+
+.full-comment-title {
+    font-size: 20px;
+    color: #e9a6a6;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.full-comment-artist {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.full-comment-user {
+    margin-bottom: 1vh;
+    font-size: 10px;
+}
+
+.full-comment-description {
+    margin-bottom: 1vh;
+    font-size: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
