@@ -6,6 +6,8 @@ import "./album.css";
 
 import Placeholder from '../assets/placeholder.PNG';
 
+import back from '../assets/back.png';
+
 import Review from "../components/reviewMini";
 
 const Album = () => {
@@ -49,7 +51,7 @@ const Album = () => {
 
     return (
         <div className="album">
-            <img className="album-back" src={Placeholder} alt="arrow" onClick={navigateToHome} />
+            <img className="album-back" src={back} alt="arrow" onClick={navigateToHome} />
             <div className="album-heading">
                 <img className="album-cover" src={album.cover || Placeholder} alt="cover" />
                 <div className="album-heading-right">

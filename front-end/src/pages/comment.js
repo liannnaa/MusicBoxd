@@ -6,6 +6,8 @@ import './comment.css';
 
 import Placeholder from "../assets/placeholder.PNG";
 
+import back from "../assets/back.png";
+
 const Comment = () => {
   const navigate = useNavigate();
   
@@ -30,7 +32,7 @@ const Comment = () => {
   return (
     <div className="comment">
         <div className="comment-top">
-            <img className="comment-back" src={Placeholder} alt="arrow" onClick={navigateToList} />
+            <img className="comment-back" src={back} alt="arrow" onClick={navigateToList} />
                 <span className="comment-head">
                     Write Your Comment
                 </span>

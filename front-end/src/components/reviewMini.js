@@ -5,7 +5,6 @@ import "./reviewMini.css";
 import Placeholder from '../assets/placeholder.PNG';
 
 import comment from '../assets/comment.png';
-import arrow from '../assets/back.png';
 
 const Review = ({review}) => {
     const navigate = useNavigate();
@@ -49,7 +48,6 @@ const Review = ({review}) => {
                     <span className="reviewMini-read-more">
                         Read More
                     </span>
-                    <img className="reviewMini-arrow" src={arrow} alt="arrow" />
                 </div>
             </div>
             <img className="reviewMini-album" src={review.cover || Placeholder} alt="album" />

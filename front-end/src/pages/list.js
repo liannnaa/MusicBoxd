@@ -6,6 +6,8 @@ import "./list.css";
 
 import Placeholder from '../assets/placeholder.PNG';
 
+import back from '../assets/back.png';
+
 import Album from '../components/albumMini';
 import Comment from '../components/commentMini';
 
@@ -64,7 +66,7 @@ const List = () => {
 
     return (
         <div className="list">
-            <img className="list-back" src={Placeholder} alt="arrow" onClick={navigateToHome} />
+            <img className="list-back" src={back} alt="arrow" onClick={navigateToHome} />
             <div className="list-heading">
                 <img className="list-cover" src={list.cover || Placeholder} alt="cover" />
                 <div className="list-heading-right">
