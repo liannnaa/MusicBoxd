@@ -2,15 +2,15 @@ import React from 'react';
 import "./sidebar.css";
 
 import Placeholder from '../assets/placeholder.PNG';
-import Hamburger from '../assets/hamburger.svg';
-import Home from '../assets/home.svg'
 import Albums from '../assets/albums.svg';
-import Diary from '../assets/diary.svg';
 import Reviews from '../assets/reviews.svg';
 import ToListen from '../assets/toListen.svg';
 import Lists from '../assets/list.svg';
 import Likes from '../assets/likes.svg';
-import Logout from '../assets/logout.svg';
+
+import Home from '../assets/home.png';
+import Hamburger from '../assets/menu.png';
+import Logout from '../assets/logout.png';
 
 const Sidebar = ({ hideSidebar, user }) => {
     return (
@@ -54,12 +54,6 @@ const Sidebar = ({ hideSidebar, user }) => {
                     <img className="sidebar-item-icon" src={Albums} alt="albums" />
                     <span className="sidebar-item-text">
                         Albums
-                    </span>
-                </button>
-                <button className="sidebar-item">
-                    <img className="sidebar-item-icon" src={Diary} alt="diary" />
-                    <span className="sidebar-item-text">
-                        Diary
                     </span>
                 </button>
                 <button className="sidebar-item">

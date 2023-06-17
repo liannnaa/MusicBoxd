@@ -4,9 +4,9 @@ import axios from 'axios';
 import Papa from 'papaparse';
 import "./homepage.css";
 
-import hamburger from '../assets/hamburger.svg';
-
 import Placeholder from '../assets/placeholder.PNG';
+
+import hamburger from '../assets/menu.png';
 
 import PopularAlbum from "../components/albumMini";
 import PopularList from "../components/listMini";

@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './signUp.css';
 
-import banner from '../assets/login.svg';
-import logo from '../assets/logo.PNG';
+import banner from '../assets/login.png';
+import logo from '../assets/logo.png';
 
 const SignUp = () => {
   const navigate = useNavigate();

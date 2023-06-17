@@ -1,11 +1,12 @@
 import React from 'react';
 import "./listMini.css";
 
-import heart from '../assets/heart.svg';
 import { useNavigate } from 'react-router-dom';
-import comment from '../assets/comment.svg';
 
 import Placeholder from '../assets/placeholder.PNG';
+
+import heart from '../assets/heart.png';
+import comment from '../assets/comment.png';
 
 const ListMini = ({list}) => {
     const navigate = useNavigate();

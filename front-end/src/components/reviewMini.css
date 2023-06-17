@@ -69,19 +69,11 @@
     color: #e9a6a6;
 }
 
-.reviewMini-stars {
-    width: 20px;
-    height: 5px;
-    object-fit: cover;
-    align-self: flex-start;
-    margin-left: 1vw;
-}
 .reviewMini-comment {
     width: 5px;
     height: 5px;
     object-fit: cover;
     align-self: center;
-    margin-left: 1vw;
   }
   
 .reviewMini-num {

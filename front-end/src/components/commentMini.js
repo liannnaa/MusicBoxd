@@ -1,7 +1,7 @@
 import React from 'react';
 import "./commentMini.css";
 
-import arrow from '../assets/arrowRight.svg';
+import arrow from '../assets/back.png';
 
 import Placeholder from '../assets/placeholder.PNG';
 

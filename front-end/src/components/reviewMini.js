@@ -2,11 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./reviewMini.css";
 
-import stars from '../assets/stars.svg';
-import comment from '../assets/comment.svg';
-import arrow from '../assets/arrowRight.svg';
-
 import Placeholder from '../assets/placeholder.PNG';
+
+import comment from '../assets/comment.png';
+import arrow from '../assets/back.png';
 
 const Review = ({review}) => {
     const navigate = useNavigate();
@@ -38,7 +37,6 @@ const Review = ({review}) => {
                             {review.reviewer || "Reviewer"}
                         </span>
                     </span>
-                    <img className="reviewMini-stars" src={stars} alt="stars" />
                     <img className="reviewMini-comment" src={comment} alt="comment" />
                     <span className="reviewMini-num">
                         {review.rating || "1"}

@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './onBoarding.css';
 
-import header from "../assets/start.svg";
-import logo from "../assets/logo.PNG";
+import header from "../assets/start.png";
+import logo from "../assets/logo.png";
 
 const OnBoarding= () => {
   const navigate = useNavigate();
