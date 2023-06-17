@@ -44,7 +44,6 @@ const Review = () => {
                         Give your rating
                     </span>
                     <div className="review-rate">
-                        <img className="review-stars" src={Placeholder} alt="stars" />
                         <img className="review-heart" src={Placeholder} alt="heart" />
                     </div>
                 </div>
