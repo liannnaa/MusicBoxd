@@ -15,6 +15,10 @@ import Comment from './pages/comment';
 import Albums from './pages/albums';
 import Lists from './pages/lists';
 import UserReview from './pages/userReviewed';
+import UserAlbums from './pages/userAlbums';
+import UserLists from './pages/userLists';
+import ToListen from './pages/toListen';
+import Hearts from './pages/hearts';
 import FullReview from './pages/fullReview';
 import FullComment from './pages/fullComment';
 
@@ -36,6 +40,10 @@ function App() {
           <Route path="/Lists" element={<Lists />} />
           <Route path="/FriendReviews" element={<FriendReview />} />
           <Route path="/UserReviews" element={<UserReview />} />
+          <Route path="/UserAlbums" element={<UserAlbums />} />
+          <Route path="/UserLists" element={<UserLists />} />
+          <Route path="/ToListen" element={<ToListen />} />
+          <Route path="/Hearts" element={<Hearts />} />
           <Route path="/FullReview" element={<FullReview />} />
           <Route path="/FullComment" element={<FullComment />} />
         </Routes>
