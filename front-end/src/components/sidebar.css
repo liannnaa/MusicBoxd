@@ -131,6 +131,7 @@
     display: flex;
     background-color: #1f1d36;
     border: none;
+    cursor: pointer;
 }
 
 .sidebar-item-icon {
@@ -161,6 +162,7 @@
     margin-top: 5vh;
     font-size: .563rem;
     display: flex;
+    cursor: pointer;
 }
   
 .sidebar-logout-icon {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./sidebar.css";
 
 import Placeholder from '../assets/placeholder.PNG';
@@ -12,6 +13,27 @@ import Hearts from '../assets/heart.png';
 import Logout from '../assets/logout.png';
 
 const Sidebar = ({ hideSidebar, user }) => {
+    const navigate = useNavigate();
+
+    const navigateToAlbums = () => {
+        navigate("/UserAlbums");
+    }
+    const navigateToLists = () => {
+        navigate("/UserLists");
+    }
+    const navigateToReviews = () => {
+        navigate("/UserReviews");
+    }
+    const navigateToListen = () => {
+        navigate("/ToListen");
+    }
+    const navigateToHearts = () => {
+        navigate("/Hearts");
+    }
+    const navigateToOnboard = () => {
+        navigate("/");
+    }
+
     return (
         <div className="sidebar">
             <div className="sidebar-contents">
@@ -43,37 +65,37 @@ const Sidebar = ({ hideSidebar, user }) => {
                         </div>
                     </button>
                 </div>
-                <button className="sidebar-item">
+                <button className="sidebar-item" onClick={navigateToAlbums} >
                     <img className="sidebar-item-icon" src={Albums} alt="Albums" />
                     <span className="sidebar-item-text">
                         Albums
                     </span>
                 </button>
-                <button className="sidebar-item">
+                <button className="sidebar-item" onClick={navigateToLists} >
                     <img className="sidebar-item-icon" src={Lists} alt="Lists" />
                     <span className="sidebar-item-text">
                         Lists
                     </span>
                 </button>
-                <button className="sidebar-item">
+                <button className="sidebar-item" onClick={navigateToReviews} >
                     <img className="sidebar-item-icon" src={Reviews} alt="Reviews" />
                     <span className="sidebar-item-text">
                         Reviews
                     </span>
                 </button>
-                <button className="sidebar-item">
+                <button className="sidebar-item" onClick={navigateToListen} >
                     <img className="sidebar-item-icon" src={ToListen} alt="ToListen" />
                     <span className="sidebar-item-text">
                         To Listen
                     </span>
                 </button>
-                <button className="sidebar-item">
+                <button className="sidebar-item" onClick={navigateToHearts} >
                     <img className="sidebar-item-icon" src={Hearts} alt="Hearts" />
                     <span className="sidebar-item-text">
                         Hearts
                     </span>
                 </button>
-                <div className="sidebar-logout">
+                <div className="sidebar-logout" onClick={navigateToOnboard} >
                     <img className="sidebar-logout-icon" src={Logout} alt="logout" />
                     <span className="sidebar-logout-text">
                         Logout
