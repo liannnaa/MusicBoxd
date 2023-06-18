@@ -5,6 +5,9 @@ import Papa from 'papaparse';
 import "./fullReview.css";
 
 import Placeholder from '../assets/placeholder.PNG';
+
+import back from '../assets/back.png';
+
 import Comment from '../components/commentMini';
 
 const Review = () => {
@@ -48,7 +51,7 @@ const Review = () => {
 
     return (
         <div className="full-review">
-            <img className="full-review-back" src={Placeholder} alt="arrow" onClick={navigateToHome} />
+            <img className="full-review-back" src={back} alt="arrow" onClick={navigateToHome} />
             <div className="full-review-heading">
                 <img className="full-review-cover" src={review.cover || Placeholder} alt="cover" />
                 <div className="full-review-heading-right">
@@ -74,8 +77,8 @@ const Review = () => {
                     </span>
                 </div>
             </div>
-            <button className="full-review-button">
-                <span className="full-review-button-text" onClick={navigateToComment} >
+            <button className="full-review-button" onClick={navigateToComment} >
+                <span className="full-review-button-text" >
                     Comment
                 </span>
             </button>

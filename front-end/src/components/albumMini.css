@@ -12,8 +12,9 @@
     width: 58px;
     height: 58px;
     object-fit: cover;
-    align-self: flex-start;
+    align-self: center;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .albumMini-title {

@@ -40,6 +40,7 @@ body, html {
     align-items: center;
     width: 100%;
     margin-top: 1vh;
+    max-width: 100%;
 }
 
 .album-cover {
@@ -53,6 +54,8 @@ body, html {
     flex-direction: column;
     align-items: center;
     width: 40vw;
+    max-width: 40vw;
+    overflow-wrap: break-word;
 }
 
 .album-head {
@@ -63,6 +66,10 @@ body, html {
     font-size: 20px;
     margin-right: 3vw;
     color: #e9a6a6;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .album-year {
@@ -71,11 +78,6 @@ body, html {
 }
 
 .album-artist {
-    margin-bottom: 1vh;
-    font-size: 10px;
-}
-
-.album-description {
     margin-bottom: 1vh;
     font-size: 10px;
 }
@@ -106,6 +108,7 @@ body, html {
     font-family: Open Sans, Arial;
     font-size: .775rem;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .album-button-text {

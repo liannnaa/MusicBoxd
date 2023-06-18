@@ -6,6 +6,9 @@ import './reviewPage.css';
 
 import Placeholder from "../assets/placeholder.PNG";
 
+import back from "../assets/back.png";
+import heart from "../assets/heart.png";
+
 const Review = () => {
     const navigate = useNavigate();
   
@@ -30,7 +33,7 @@ const Review = () => {
     return (
         <div className="review">
             <div className="review-top">
-                <img className="review-back" src={Placeholder} alt="arrow" onClick={navigateToAlbum} />
+                <img className="review-back" src={back} alt="arrow" onClick={navigateToAlbum} />
                     <span className="review-head">
                         Write Your Review
                     </span>
@@ -44,8 +47,7 @@ const Review = () => {
                         Give your rating
                     </span>
                     <div className="review-rate">
-                        <img className="review-stars" src={Placeholder} alt="stars" />
-                        <img className="review-heart" src={Placeholder} alt="heart" />
+                        <img className="review-heart" src={heart} alt="heart" />
                     </div>
                 </div>
                 <img className="review-cover" src={album.cover || Placeholder} alt="album" />

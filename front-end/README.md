@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ```
 REACT_APP_BACKEND=.......
+REACT_APP_MOCKAROO=.......
 ```
 
 In order to run the project, first clone the entire repository, and navigate to the front-end folder.

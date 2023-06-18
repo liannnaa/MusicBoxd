@@ -35,6 +35,7 @@
     top: 4vh;
     left: 2vh;
     transform: translateY(-50%);
+    cursor: pointer;
 }
   
 .sidebar-profile{

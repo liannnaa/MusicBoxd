@@ -27,7 +27,7 @@ const Albums = () => {
                 Popular Albums
             </span>
             <div className="albums-mini">
-                {albums.slice(0, 3).map((album) => (
+                {albums.slice(0, 5).map((album) => (
                     <Album key={album.id} album={album} />
                 ))}
             </div>

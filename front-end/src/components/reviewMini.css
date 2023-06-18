@@ -20,6 +20,7 @@
     align-self: flex-start;
     align-items: stretch;
     display: flex;
+    cursor: pointer;
 }
   
 .reviewMini-pp {
@@ -68,20 +69,13 @@
     color: #e9a6a6;
 }
 
-.reviewMini-stars {
-    width: 20px;
-    height: 5px;
-    object-fit: cover;
-    align-self: flex-start;
-    margin-left: 1vw;
-}
 .reviewMini-comment {
     width: 5px;
     height: 5px;
     object-fit: cover;
     align-self: center;
     margin-left: 1vw;
-  }
+}
   
 .reviewMini-num {
     align-self: center;
@@ -106,13 +100,6 @@
   
 .reviewMini-read-more {
     align-self: flex-start;
-}
-  
-.reviewMini-arrow {
-    width: 2px;
-    height: 3px;
-    object-fit: cover;
-    align-self: center;
 }
 
 .reviewMini-album {

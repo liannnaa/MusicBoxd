@@ -7,6 +7,7 @@ import "./profile.css";
 import Placeholder from '../assets/placeholder.PNG';
 
 import AlbumCover from "../components/albumMini";
+import ListCover from "../components/listMini";
 import RecentReview from "../components/reviewMini";
 import Menu from "../components/menu";
 
@@ -27,6 +28,20 @@ const Profile = () => {
                 dynamicTyping: true,
             });
             setAlbums(parsedData.data);
+        })
+        .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+
+    const [lists, setLists] = useState([]);
+    useEffect(() => {
+        axios
+        .get(`https://my.api.mockaroo.com/list.json?key=${process.env.REACT_APP_MOCKAROO}`)
+        .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setLists(parsedData.data);
         })
         .catch((error) => console.error(`Error: ${error}`));
     }, []);
@@ -103,11 +118,11 @@ const Profile = () => {
                 ))}
             </div>
             <span className="profile-section-title">
-                User's Recent Listened
+                User's Recent Lists
             </span>
             <div className="profile-section-contents">
-                {albums.slice(0, 3).map((album) => (
-                    <AlbumCover key={album.id} album={album} />
+                {lists.slice(0, 3).map((list) => (
+                    <ListCover key={list.id} list={list} />
                 ))}
             </div>
             <span className="profile-section-title" onClick={navigateToReviews} >

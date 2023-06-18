@@ -27,7 +27,7 @@ const Lists = () => {
                 Popular Lists
             </span>
             <div className="lists-mini">
-                {lists.slice(0, 3).map((list) => (
+                {lists.slice(0, 5).map((list) => (
                     <List key={list.id} list={list} />
                 ))}
             </div>
