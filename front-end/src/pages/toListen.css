@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1f1d36;}
+
+.to-listen {
+    width: 100vw;
+    display: flex;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    box-sizing: border-box;
+    font-family: Open Sans, Arial;
+    color: #fff;
+}
+
+.to-listen-title {
+    font-size: 2rem;
+    margin-bottom: 3vh;
+}
+
+.to-listen-username {
+    color: #e9a6a6;
+}
+
+.to-listen-mini {
+    display: flex;
+}
+
+.to-listen-mini {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.to-listen-album {
+    flex: 1 0 200px;
+    margin: 1rem;
+    padding-bottom: 2rem;
+}
