@@ -21,10 +21,27 @@ const Reviews = () => {
           .catch((error) => console.error(`Error: ${error}`));
     }, []);
 
+    const [user, setUser] = useState([]);
+    useEffect(() => {
+        axios
+          .get(`https://my.api.mockaroo.com/user.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .then((response) => {
+            let parsedData = Papa.parse(response.data, {
+                header: true,
+                dynamicTyping: true,
+            });
+            setUser(parsedData.data[0]);
+          })
+          .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+
     return (
         <div className="user-reviews">
             <span className="user-reviews-title">
-                User Reviews
+            <span className="user-lists-username">
+                    {user.name || "User Name"}'s
+                </span>
+                {" "}Reviews
             </span>
             <div className="user-reviews-mini">
                 {reviews.slice(0, 3).map((review) => (

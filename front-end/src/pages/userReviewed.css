@@ -32,6 +32,10 @@ body, html {
     margin-bottom: 3vh;
 }
 
+.user-reviews-username {
+    color: #e9a6a6;
+}
+
 .user-reviews-mini {
     width: 100%;
 }
