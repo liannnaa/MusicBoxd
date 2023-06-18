@@ -73,6 +73,13 @@ body, html {
     margin-left: 5vw;
     margin-top: -5vh;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.homepage-section-title:hover,
+.homepage-section-title:focus,
+.homepage-section-title:active {
+    color: #e9a6a6;
 }
 
 .homepage-section-contents {
