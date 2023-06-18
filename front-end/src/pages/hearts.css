@@ -36,10 +36,16 @@ body, html {
     color: #e9a6a6;
 }
 
+.hearts-sub {
+    align-self: flex-start;
+    margin-bottom: 1vh;
+}
+
 .hearts-mini {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 .hearts-list {
