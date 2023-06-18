@@ -10,7 +10,7 @@ body, html {
     justify-content: space-between;
     background-color: #1f1d36;}
 
-.user-reviews {
+.hearts {
     width: 100vw;
     display: flex;
     border-radius: 0;
@@ -27,15 +27,23 @@ body, html {
     color: #fff;
 }
 
-.user-reviews-title {
+.hearts-title {
     font-size: 2rem;
     margin-bottom: 3vh;
 }
 
-.user-reviews-username {
+.hearts-username {
     color: #e9a6a6;
 }
 
-.user-reviews-mini {
-    width: 100%;
+.hearts-mini {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hearts-list {
+    flex: 1 0 200px;
+    margin: 1rem;
+    padding-bottom: 2rem;
 }

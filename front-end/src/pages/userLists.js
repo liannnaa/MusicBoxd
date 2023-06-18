@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Papa from 'papaparse';
-import "./userReviewed.css";
+import "./userLists.css";
 
-import Review from "../components/reviewMini";
+import List from "../components/listMini";
 import Menu from "../components/menu";
 
-const Reviews = () => {
-    const [reviews, setReviews] = useState([]);
+const UserLists = () => {
+    const [lists, setLists] = useState([]);
     useEffect(() => {
         axios
-          .get(`https://my.api.mockaroo.com/review.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .get(`https://my.api.mockaroo.com/list.json?key=${process.env.REACT_APP_MOCKAROO}`)
           .then((response) => {
             let parsedData = Papa.parse(response.data, {
                 header: true,
                 dynamicTyping: true,
             });
-            setReviews(parsedData.data);
+            setLists(parsedData.data);
           })
           .catch((error) => console.error(`Error: ${error}`));
     }, []);
@@ -36,22 +36,22 @@ const Reviews = () => {
     }, []);
 
     return (
-        <div className="user-reviews">
-            <span className="user-reviews-title">
-            <span className="user-lists-username">
+        <div className="user-lists">
+            <span className="user-lists-title">
+                <span className="user-lists-username">
                     {user.name || "User Name"}'s
                 </span>
-                {" "}Reviews
+                {" "}Lists
             </span>
-            <div className="user-reviews-mini">
-                {reviews.slice(0, 3).map((review) => (
-                    <Review key={review.id} review={review} />
+            <div className="user-lists-mini">
+                {lists.slice(0, 5).map((list) => (
+                    <List key={list.id} list={list} />
                 ))}
             </div>
-            <div className="user-reviews-menu">
+            <div className="user-lists-menu">
                 <Menu/>
             </div>
         </div>
     );
 };
-export default Reviews;
+export default UserLists;

@@ -14,6 +14,12 @@ import Menu from "../components/menu";
 const Profile = () => {
     const navigate = useNavigate();
 
+    const navigateToAlbums = () => {
+        navigate("/UserAlbums");
+    }
+    const navigateToLists = () => {
+        navigate("/UserLists");
+    }
     const navigateToReviews = () => {
         navigate("/UserReviews");
     }
@@ -109,7 +115,7 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-            <span className="profile-section-title">
+            <span className="profile-section-title" onClick={navigateToAlbums} >
                 User's Favorite Albums
             </span>
             <div className="profile-section-contents">
@@ -117,7 +123,7 @@ const Profile = () => {
                     <AlbumCover key={album.id} album={album} />
                 ))}
             </div>
-            <span className="profile-section-title">
+            <span className="profile-section-title" onClick={navigateToLists} >
                 User's Recent Lists
             </span>
             <div className="profile-section-contents">

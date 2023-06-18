@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Papa from 'papaparse';
-import "./userReviewed.css";
+import "./userAlbums.css";
 
-import Review from "../components/reviewMini";
+import Album from "../components/albumMini";
 import Menu from "../components/menu";
 
-const Reviews = () => {
-    const [reviews, setReviews] = useState([]);
+const UserAlbums = () => {
+    const [albums, setAlbums] = useState([]);
     useEffect(() => {
         axios
-          .get(`https://my.api.mockaroo.com/review.json?key=${process.env.REACT_APP_MOCKAROO}`)
+          .get(`https://my.api.mockaroo.com/album.json?key=${process.env.REACT_APP_MOCKAROO}`)
           .then((response) => {
             let parsedData = Papa.parse(response.data, {
                 header: true,
                 dynamicTyping: true,
             });
-            setReviews(parsedData.data);
+            setAlbums(parsedData.data);
           })
           .catch((error) => console.error(`Error: ${error}`));
     }, []);
@@ -36,22 +36,22 @@ const Reviews = () => {
     }, []);
 
     return (
-        <div className="user-reviews">
-            <span className="user-reviews-title">
-            <span className="user-lists-username">
+        <div className="user-albums">
+            <span className="user-albums-title">
+                <span className="user-albums-username">
                     {user.name || "User Name"}'s
                 </span>
-                {" "}Reviews
+                {" "}Albums
             </span>
-            <div className="user-reviews-mini">
-                {reviews.slice(0, 3).map((review) => (
-                    <Review key={review.id} review={review} />
+            <div className="user-albums-mini">
+                {albums.slice(0, 5).map((album) => (
+                    <Album key={album.id} album={album} />
                 ))}
             </div>
-            <div className="user-reviews-menu">
+            <div className="user-albums-menu">
                 <Menu/>
             </div>
         </div>
     );
 };
-export default Reviews;
+export default UserAlbums;

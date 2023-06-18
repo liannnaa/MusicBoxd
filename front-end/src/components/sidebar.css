@@ -131,6 +131,7 @@
     display: flex;
     background-color: #1f1d36;
     border: none;
+    cursor: pointer;
 }
 
 .sidebar-item-icon {
@@ -146,7 +147,14 @@
     align-self: center;
     margin-top: 1px;
     margin-right: 11px;
-    color: #ffffff80;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.sidebar-item-text:hover,
+.sidebar-item-text:focus,
+.sidebar-item-text:active {
+    color: #e9a6a6;
 }
   
 .sidebar-logout {
@@ -161,6 +169,7 @@
     margin-top: 5vh;
     font-size: .563rem;
     display: flex;
+    cursor: pointer;
 }
   
 .sidebar-logout-icon {
@@ -174,5 +183,12 @@
   
 .sidebar-logout-text {
     align-self: flex-end;
+    transition: color 0.3s ease;
+}
+
+.sidebar-logout-text:hover,
+.sidebar-logout-text:focus,
+.sidebar-logout-text:active {
+    color: #e9a6a6;
 }
   

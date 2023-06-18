@@ -106,6 +106,13 @@ body, html {
     margin-left: 5vw;
     margin-top: -5vh;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.profile-section-title:hover,
+.profile-section-title:focus,
+.profile-section-title:active {
+    color: #e9a6a6;
 }
 
 .profile-section-contents {
