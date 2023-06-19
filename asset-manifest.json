@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/MusicBoxd/static/css/main.598d063e.css",
+    "main.js": "/MusicBoxd/static/js/main.865b8217.js",
+    "static/js/787.22edae46.chunk.js": "/MusicBoxd/static/js/787.22edae46.chunk.js",
+    "static/media/login.png": "/MusicBoxd/static/media/login.4188d56560eaf17400d4.png",
+    "static/media/start.png": "/MusicBoxd/static/media/start.616ff032132f00917ce0.png",
+    "static/media/placeholder.PNG": "/MusicBoxd/static/media/placeholder.d9f358362469ede358ef.PNG",
+    "static/media/logo.png": "/MusicBoxd/static/media/logo.099465afa5d102527a1e.png",
+    "index.html": "/MusicBoxd/index.html",
+    "main.598d063e.css.map": "/MusicBoxd/static/css/main.598d063e.css.map",
+    "main.865b8217.js.map": "/MusicBoxd/static/js/main.865b8217.js.map",
+    "787.22edae46.chunk.js.map": "/MusicBoxd/static/js/787.22edae46.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.598d063e.css",
+    "static/js/main.865b8217.js"
+  ]
+}
